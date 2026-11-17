@@ -1,0 +1,31 @@
+--- original/src/Makefile
++++ public/src/Makefile
+@@ -7,12 +7,12 @@
+ LDLIBS = -lcrypto
+ .PHONY: all ie test clean
+ all: a180205
+-ie: ../validation/ie
++ie: ../check/ie
+ a180205: a180205.c Makefile
+ 	$(CC) $(CFLAGS) a180205.c -o $@ $(LDLIBS)
+-../validation/ie: ../validation/ie.cpp Makefile
++../check/ie: ../check/ie.cpp Makefile
+ 	$(CXX) $(CXXFLAGS) $< -o $@ $(LDLIBS)
+-test: all ie
+-	python3 -B ../validation/test.py
++test:
++	python3 -B ../check/verify.py --build
+ clean:
+-	rm -f a180205 ../validation/ie
++	rm -f a180205 ../check/ie
+--- original/runbooks/first18.py
++++ public/check/first18.py
+@@ -13,7 +13,7 @@
+ import time
+ 
+ ROOT=Path(__file__).resolve().parents[1]
+-SOURCE=ROOT/'src_review/rc1/01_MiniMax_review_recomputation_check.py'
++SOURCE=ROOT/'check/scalar.py'
+ 
+ def count(maximum):
+     if not 1<=maximum<=18:

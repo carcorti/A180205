@@ -1,0 +1,983 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,array}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdfauthor={Carlo Corti},pdftitle={Exact Enumeration of Adjacent-Sum Permutations: OEIS A180205 through n=28}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Znn}{\mathbb Z_{\geq0}}
+\newcommand{\An}{\mathcal A_n}
+\title{Exact Enumeration of Adjacent-Sum Permutations:\\OEIS A180205 through $n=28$}
+\author{Carlo Corti\\Independent researcher\\\texttt{carlo.corti@outlook.com}}
+\date{November 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+OEIS A180205 counts permutations of $0,\ldots,n-1$ that are
+consecutive sums of two adjacent entries of a nonnegative integer sequence of length
+$n+1$. We report an exact enumeration through $n=28$, adding eleven locally
+validated values to the historical 17-term baseline, with
+$a(28)=1226245772785310491672576$. The unique zero label fixes the entire
+realization and separates two outward tails on complementary label sets.
+We prove the resulting counting identity and implement its weighted subset
+recurrence with a scalar continuation state, parity compression and colexicographic
+indexing. An algorithmically distinct inclusion--exclusion enumeration of
+repeated-label walks agrees on all 28 values. Both enumerations share the
+zero decomposition, scalar transition and ordered tail product on actual
+labels. Two coprime moduli and a factorial bound make Chinese remainder
+reconstruction exact conditional on correct, complete residues.
+A direct interval predicate checks the original definition
+exhaustively through $n=8$, and an unpacked arbitrary-precision Python
+implementation of the same subset recurrence supplies an additional comparison
+through $18$. We give
+proofs, intermediate bounds, operation counts and the measured computational
+costs, keeping the finite validation domains explicit.
+\end{abstract}
+
+\noindent\textbf{2020 Mathematics Subject Classification.}
+Primary 05A05; Secondary 05A15, 05A19.
+
+\smallskip
+\noindent\textbf{Key words and phrases.}
+permutation, adjacent sum, nonnegative realization, subset dynamic programming,
+inclusion--exclusion, exact enumeration, OEIS A180205.
+
+\section{Introduction}
+\label{sec:intro}
+
+For $n\geq1$, let $\An$ consist of the permutations $p=(p_1,\ldots,p_n)$
+of $\{0,\ldots,n-1\}$ for which there exists
+$x=(x_0,\ldots,x_n)\in\Znn^{n+1}$ satisfying
+\begin{equation}
+ p_i=x_{i-1}+x_i\qquad(1\leq i\leq n).
+ \label{eq:definition}
+\end{equation}
+Write $a(n)=|\An|$, with initial index $1$, as in OEIS
+A180205~\cite{hardin}. The witness entries may repeat and may be zero.
+We count ordered permutations, without identifying reversal, rotation,
+complementation or inverse permutations. For example, $(1,0,2)$ is
+realized by $(1,0,0,2)$, whereas $(0,2,1)$ has no nonnegative realization.
+
+The historical baseline used here has 17 terms, ending in
+$a(17)=445393216256$, and retains R.~H. Hardin's attribution.
+The entry gives the author date 15 August 2010, and its OEIS revision history
+already includes all 17 terms in revision 1, dated 27 August 2010.
+The official OEIS export dated 16 November 2026 agrees with that
+baseline~\cite{hardin}. This identifies the comparison range, rather than
+asserting that no other results exist. In particular, an earlier preliminary
+assessment attributed to Meta AI already listed candidates
+$4783835680768$ and $54372476838912$ for indices 18 and 19.
+Its original executable calculations and raw logs were not supplied.
+The present work does not claim that these numbers first appeared in the
+completed runs: their validation here rests on the later recorded
+enumerations and comparisons.
+
+The adjacent-window family includes A180206--A180212, with
+window lengths three through nine, respectively~\cite{a180206,a180207,a180208,a180209,a180210,a180211,a180212}.
+The author's earlier four-window study~\cite{four} uses a zero separator,
+weighted subset counting and repeated-label inclusion--exclusion. Its
+continuation state is a triple; the present two-window problem has a scalar
+state rather than a tuple of the preceding realization entries, permitting
+the parity and storage reductions developed below.
+That study provides methodological context, not numerical values for A180205.
+
+Inverse adjacent sums are also described in the first-sums composition
+entries A391643, A391645 and A391621~\cite{a391643,a391645,a391621}. They use an initial
+integer and partial alternating sums to distinguish uniqueness, infeasibility
+and witness multiplicity. A391681 counts compositions with parts greater
+than one that have no strictly positive realization, while A390567 counts
+compositions into positive parts with distinct first sums~\cite{a391681,a390567}.
+Here a composition has positive parts, including the empty composition
+at total zero; a nonnegative realization is a different condition.
+These objects are indexed by composition total or
+rank and do not give the distribution by the prescribed label set
+$\{0,\ldots,n-1\}$. Their aggregate formulas are therefore not used to
+obtain terms of A180205. Another apparent correlation is only numerical:
+A131529 counts permutations with distinct adjacent differences~\cite{differences}.
+It agrees on the first six values, but has $788$ at index $7$, compared
+with $a(7)=768$.
+
+The contribution is a proved scalar-tail enumeration with exact arithmetic,
+a complete validated prefix through $28$, and an explicit account of what
+each validation method checks, including their shared premises in
+Section~\ref{sec:validation}. Scanning all $n!$ permutations is replaced
+by weighted aggregation over subsets. Section~\ref{sec:criterion} gives
+a direct feasibility test, Sections~\ref{sec:tails}--\ref{sec:producer}
+prove and describe the producer, and Section~\ref{sec:ie} gives the separate
+inclusion--exclusion count. Sections~\ref{sec:validation}--\ref{sec:results}
+state the recorded coverage, results and costs.
+
+\section{A direct feasibility criterion}
+\label{sec:criterion}
+
+The following test applies to any nonempty nonnegative integer word $p$,
+without locating a zero. Put
+\begin{equation}
+ c_0=0,\qquad c_j=p_j-c_{j-1}\quad(1\leq j\leq n).
+ \label{eq:c}
+\end{equation}
+For $x_0=t$, successive substitution in~\eqref{eq:definition} gives
+\begin{equation}
+ x_j=(-1)^j t+c_j.
+ \label{eq:intervalwitness}
+\end{equation}
+Define the integer bounds
+\begin{equation}
+ L=\max\bigl(\{0\}\cup\{-c_j:1\leq j\leq n,\ j\text{ even}\}\bigr),
+ \qquad H=\min_{\substack{1\leq j\leq n\\j\text{ odd}}}c_j.
+ \label{eq:interval}
+\end{equation}
+
+\begin{proposition}[Interval criterion]
+\label{prop:interval}
+The word $p$ has a nonnegative integer realization if and only if $L\leq H$.
+When feasible, it has exactly $H-L+1$ realizations.
+\end{proposition}
+\begin{proof}
+The recurrence forces~\eqref{eq:intervalwitness} for every choice of $t$.
+The constraint at an odd index is $t\leq c_j$, and at an even index it is
+$t\geq-c_j$; also $t\geq0$. Thus all entries are nonnegative exactly for
+the integers in $[L,H]$. Conversely, every such $t$ gives
+$x_{j-1}+x_j=c_{j-1}+c_j=p_j$, proving sufficiency and the multiplicity.
+The upper bound is defined even for $n=1$, since $j=1$ is odd.
+\end{proof}
+
+This is a linear-time test using integer arithmetic. The alternating-sum
+parameterization is established first-sums methodology~\cite{a391643,a391645,a391621};
+it is rederived here to specify a validation predicate that does not use
+the zero decomposition or the subset recurrence.
+
+\section{Zero decomposition and structural bounds}
+\label{sec:tails}
+
+\begin{lemma}[Unique realization]
+\label{lem:unique}
+Every $p\in\An$ has exactly one nonnegative integer realization.
+\end{lemma}
+\begin{proof}
+Let $p_j=0$. Equation~\eqref{eq:definition} and nonnegativity force
+$x_{j-1}=x_j=0$. Moving right, $x_i=p_i-x_{i-1}$ determines the
+remaining entries; moving left, $x_{i-1}=p_i-x_i$ does the same.
+Every entry is therefore forced, and existence is part of membership in
+$\An$. For $n=1$, the witness is $(0,0)$. In particular, feasibility
+for a permutation forces $L=H$ in Proposition~\ref{prop:interval}.
+\end{proof}
+
+\begin{definition}
+An outward tail on a finite set $S$ of positive integer labels is an ordering
+$(v_1,\ldots,v_h)$ of $S$ such that the scalar walk
+\begin{equation}
+ s_0=0,\qquad s_i=v_i-s_{i-1}\geq0\quad(1\leq i\leq h)
+ \label{eq:tail}
+\end{equation}
+remains nonnegative. Let $F(S)$ count these orderings, with
+$F(\varnothing)=1$.
+\end{definition}
+
+\begin{theorem}[Ordered zero decomposition]
+\label{thm:split}
+For $n\geq1$, with $U=\{1,\ldots,n-1\}$,
+\begin{equation}
+ a(n)=\sum_{S\subseteq U}F(S)F(U\setminus S).
+ \label{eq:split}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Let $p\in\An$, with its unique realization from Lemma~\ref{lem:unique}.
+For $p_j=0$, read its left labels outward as
+$(p_{j-1},\ldots,p_1)$, starting from $x_{j-1}=0$, and its right labels
+as $(p_{j+1},\ldots,p_n)$, starting from $x_j=0$.
+Both obey~\eqref{eq:tail}; their label sets are complementary subsets of $U$.
+
+Conversely, take a left tail $\ell=(\ell_1,\ldots,\ell_h)$ on $S$ and a
+right tail $r=(r_1,\ldots,r_{n-1-h})$ on $U\setminus S$. If their
+generated scalar states are $s_1,\ldots,s_h$ and
+$t_1,\ldots,t_{n-1-h}$, form the witness
+\[
+ (s_h,\ldots,s_1,0,0,t_1,\ldots,t_{n-1-h}).
+\]
+Its adjacent sums are precisely
+$(\ell_h,\ldots,\ell_1,0,r_1,\ldots,r_{n-1-h})$.
+The two label sets are disjoint and, together with zero, exhaust
+$\{0,\ldots,n-1\}$. This is an admissible permutation, whose zero position recovers both tails
+and their sets. The construction is a bijection, including two empty tails
+when $n=1$. The split has an ordered left and right side: there is no
+division by two and no additional binomial factor.
+\end{proof}
+
+Actual labels matter. The valid orders on $\{1,2,3\}$ are
+$(1,2,3)$, $(1,3,2)$ and $(2,3,1)$, whereas on $\{1,2,4\}$ the only
+valid order is $(1,2,4)$. Thus $F(S)$ cannot be replaced by a function
+of $|S|$ or by a rank-standardized set.
+
+\begin{proposition}[Positivity, reversal and growth]
+\label{prop:growth}
+Every finite positive-label set has $F(S)\geq1$. Also, for $n>1$, $a(n)$
+is even, and for every $n\geq1$,
+\begin{equation}
+ a(n+1)\geq2a(n),\qquad 2^{n-1}\leq a(n)\leq n!.
+ \label{eq:bounds}
+\end{equation}
+\end{proposition}
+\begin{proof}
+For the increasing order $v_1<\cdots<v_h$, the first state is
+$s_1=v_1$. If $0\leq s_{i-1}\leq v_{i-1}<v_i$, then
+$s_i=v_i-s_{i-1}$ lies in $[0,v_i]$. Induction proves that this order
+is a valid tail. The empty set has its single empty ordering.
+
+Reversing $p$ and $x$ preserves~\eqref{eq:definition}. A permutation of
+length greater than one cannot equal its reversal, since its first and last
+labels differ. Reversal is therefore a fixed-point-free involution on $\An$.
+
+In any realization of a member of $\An$, each endpoint is at most $n-1$,
+as follows from its adjacent sum. Prepending the new label $n$ is realized
+by prepending $n-x_0\geq0$ to $x$; appending $n$ is realized by appending
+$n-x_n\geq0$. Both maps from $\An$ to $\mathcal A_{n+1}$ are injective
+by deletion of the new label. Their images are disjoint: a word of length
+$n+1\geq2$ cannot have its unique label $n$ at both ends.
+This proves the growth inequality, including $n=1$. Iteration from
+$a(1)=1$ gives the lower bound. The upper bound counts all permutations.
+\end{proof}
+
+The analogous reversal and end-extension properties occur in the earlier
+four-window work~\cite{four}; they are not claimed here as new general
+phenomena. Positivity also rules out discarding entire subsets as impossible.
+
+\section{Exact subset dynamic programming}
+\label{sec:producer}
+
+\subsection{Weighted scalar states}
+
+Fix a maximum index $N$ and put $M=N-1$. Throughout, $m\leq M$ denotes
+the size of a smaller label universe $\{1,\ldots,m\}$. The C program
+evaluating the subset recurrence is called the \emph{producer}. For
+$S\subseteq\{1,\ldots,M\}$, let $W(S,s)$ count tails on $S$ ending at
+state $s$. Initialize $W(\varnothing,0)=1$, with all other empty-set
+states zero. Extend $W$ by zero outside $0\leq s\leq M$. Removing a
+tail's last label gives the pull recurrence
+\begin{equation}
+ W(S,s)=\sum_{\substack{v\in S\\v\geq s}}W(S\setminus\{v\},v-s),
+ \qquad F(S)=\sum_{s=0}^{M}W(S,s).
+ \label{eq:dp}
+\end{equation}
+
+\begin{proposition}[Completeness and parity]
+\label{prop:dp}
+Recurrence~\eqref{eq:dp}, evaluated in increasing $|S|$, counts every
+tail exactly once and terminates. Its nonzero states satisfy
+\begin{equation}
+ 0\leq s\leq\max S,\qquad s\equiv\sum_{v\in S}v\pmod2
+ \label{eq:parity}
+\end{equation}
+for nonempty $S$.
+\end{proposition}
+\begin{proof}
+The empty tail is the base case. A valid nonempty tail has a unique last
+label $v$, whose preceding state is $v-s\geq0$. Removing it gives the
+corresponding term of~\eqref{eq:dp}. Conversely, each counted predecessor
+appends $v$ to give a valid tail ending at $s$. Induction on $|S|$ proves
+the recurrence, and each dependency decreases $|S|$, proving termination.
+The final state is $v$ minus a nonnegative predecessor, so is at most $v$.
+Finally, $v-s_{\rm old}\equiv v+s_{\rm old}\pmod2$, proving parity by
+induction from zero.
+\end{proof}
+
+These are integer multiplicities, not Boolean reachability indicators.
+For example, tails $(1,2,3)$ and $(2,3,1)$ end at states 2 and 0,
+respectively, while $(1,3,2)$ also ends at 0. The two histories ending at
+0 must both be retained.
+
+An ambient label not in $S$ has no role in~\eqref{eq:dp}. Consequently,
+a single table of all $F(S)$ for the maximum $M$ supplies every
+$a(n)$ with $1\leq n\leq N$ by~\eqref{eq:split} on
+$\{1,\ldots,n-1\}$. For $n>1$, the producer pairs $S$ with its complement,
+iterates only the subsets omitting the largest label, and doubles the sum.
+This is an evaluation of the full ordered sum, rather than a quotient of
+the objects counted.
+
+\subsection{Colex layout and parallel ownership}
+
+Represent label $v$ by bit $v-1$. Among equal-cardinality subsets,
+colexicographic order compares the largest bit at which they differ:
+the set containing that bit is later. Equivalently, compare the increasing
+bit lists from their last elements backwards. Let
+$b_1<\cdots<b_h$ be the zero-based set bits of a mask. Its zero-based
+colexicographic rank among $h$-subsets is
+\begin{equation}
+ R_h(S)=\sum_{i=1}^{h}\binom{b_i}{i}.
+ \label{eq:rank}
+\end{equation}
+This is the standard binomial ranking formula, also given as equation (1)
+of Kruchinin et al.~\cite{colex}. One proof groups subsets by their largest
+bit $b_h$: the $\binom{b_h}{h}$ preceding subsets have all bits smaller
+than $b_h$, and ranking the remaining $h-1$ bits gives the rest by induction.
+The empty subset has rank zero; $\binom bi=0$ for $b<i$.
+Deleting $b_j$ therefore gives
+\begin{equation}
+ R_{h-1}(S\setminus\{b_j+1\})=
+ \sum_{i<j}\binom{b_i}{i}+\sum_{i>j}\binom{b_i}{i-1}.
+ \label{eq:delete}
+\end{equation}
+Prefix and suffix binomial sums compute all $h$ deletion ranks in $O(h)$
+work per mask. Colex is solely a storage index; it does not change label values.
+No approximate unranking or external benchmark constant is used.
+
+For $\pi(S)=(\sum_{v\in S}v)\bmod2$, store the value at state
+$s=\pi(S)+2j$ in row cell $j=(s-\pi(S))/2=\lfloor s/2\rfloor$,
+using a uniform width $w=\lfloor M/2\rfloor+1$.
+Padding beyond $M$ is zero. For a contribution from label $v$, the predecessor
+state $v-s$ has parity $\pi(S\setminus\{v\})$, so its cell is
+\[
+ \frac{v-s-\pi(S\setminus\{v\})}{2}
+ =\left\lfloor\frac{v-s}{2}\right\rfloor.
+\]
+The predecessor pulls stay within states $0,\ldots,M$; row summation may
+also scan zero padding.
+Two cardinality layers suffice in memory. A separate array stores all
+$2^M$ values of $F$, at offset
+$\sum_{k<h}\binom Mk+R_h(S)$.
+
+For each cardinality, workers own disjoint output rows, read the previous
+layer and binomial table, and write their own $F(S)$. A barrier separates
+successive layers. Thus no atomic addition to a shared count cell is needed.
+The scalar mathematical recurrence and these indexing formulas specify a
+reimplementation independently of the checkpoint format.
+
+\subsection{Arithmetic and work bounds}
+\label{sec:arithmetic}
+
+For $h=|S|$, each state count and $F(S)$ are at most $h!$.
+For complementary subsets of $m$ labels,
+$F(S)F(U\setminus S)\leq h!(m-h)!\leq m!$.
+Every partial nonnegative sum in the recurrence, row total or ordered
+convolution is bounded by the corresponding complete count; in particular
+the convolution is at most $n!$. The doubled half-sum also has this bound,
+since it consists of disjoint complementary pairs.
+
+The C17 producer uses the GNU unsigned 128-bit integer
+extension~\cite{gcc}, with checked additions and multiplications.
+Its implemented horizon is $N\leq30$, and
+\[
+ 30!=265252859812191058636308480000000<2^{128}.
+\]
+The factorial bounds cover intermediates, not merely the anticipated final
+answer. Masks use 32 bits; ranks, offsets and work counters use 64 bits,
+with checked allocation and file-offset domains. The capacity through 30
+is a software limit, not a computed prefix through 30.
+
+For 16-byte cells, the principal resident-array requirement is
+\begin{equation}
+ B(M)=16\,2^M+16w\max_{1\leq h\leq M}
+ \left(\binom M{h-1}+\binom Mh\right),
+ \label{eq:memory}
+\end{equation}
+for $M=N-1\geq1$, with $M=0$ handled separately. This includes $F$ and the two
+simultaneously resident layers, not process RSS or the disk layout.
+
+For $M\geq3$, the exact number of predecessor-cell reads in the dense
+pull loops is
+\begin{equation}
+ D(M)=2^{M-3}M(M+3).
+ \label{eq:D}
+\end{equation}
+Indeed, fix an included label $v$. Among its $2^{M-1}$ masks, parity is
+balanced: since $M\geq3$, at least one of the odd labels 1 and 3 differs
+from $v$, and toggling its membership toggles parity. The mean number of
+$s\in[0,v]$ with the prescribed parity is
+$(v+1)/2$. Summing over $v=1,\ldots,M$ gives~\eqref{eq:D}.
+The small cases are $D(0)=0$, $D(1)=1$, $D(2)=5$.
+Rank construction, row clearing and summation, complementary products,
+and persistence are additional work. The arithmetic work is
+$O(M^2 2^M)$; the principal resident-cell count is
+$O(\sqrt{M}\,2^M)$ by the central binomial bound.
+
+\section{Repeated-label inclusion--exclusion and exact CRT}
+\label{sec:ie}
+
+\subsection{A different aggregation}
+
+For $T\subseteq\{1,\ldots,m\}$, allow labels to repeat. Let
+$K_h(T,s)$ count nonnegative walks of length $h$ starting at zero,
+using labels in $T$, and ending at $s$. Initialize $K_0(T,0)=1$ and
+all other states zero. The recurrence is
+\begin{equation}
+ K_{h+1}(T,t)=\sum_{\substack{v\in T\\v\geq t}}K_h(T,v-t),
+ \qquad L_h(T)=\sum_{s\geq0}K_h(T,s).
+ \label{eq:walk}
+\end{equation}
+Every state lies in $[0,\max T]$: after a transition using $v$, it is
+$v$ minus a nonnegative predecessor. For $T=\varnothing$, only the empty
+walk survives. Thus the displayed state sum is finite and independent of
+the ambient universe; whenever $\max T\leq m\leq M$, summing through
+$m$ or through $M$ gives the same value. Set $\max\varnothing=0$.
+Put $Q_m(T)=\sum_{k=0}^{m}L_k(T)L_{m-k}(T)$; the subscripted $Q_m$
+is a walk-pair count, distinct from the modulus $Q$ below.
+
+\begin{theorem}[Inclusion--exclusion identity]
+\label{thm:ie}
+For every $m\geq0$,
+\begin{equation}
+ a(m+1)=\sum_{T\subseteq\{1,\ldots,m\}}
+ (-1)^{m-|T|}Q_m(T).
+ \label{eq:ie}
+\end{equation}
+\end{theorem}
+\begin{proof}
+The product for a given $k$ counts an ordered pair of repeated-label walks with a total
+of $m$ label positions, using only $T$. Fix such a pair, and let $B$ be
+the set of labels actually used. Its total weight in~\eqref{eq:ie} is
+\[
+ \sum_{B\subseteq T\subseteq\{1,\ldots,m\}}(-1)^{m-|T|}
+ =\begin{cases}1,&B=\{1,\ldots,m\},\\0,&\text{otherwise}.\end{cases}
+\]
+Using all $m$ labels in exactly $m$ positions forces every label to appear
+once. All sums are finite, so summing by pairs before summing by alphabets
+is valid. The surviving pair is therefore a pair of distinct-label tails on
+complementary sets. Theorem~\ref{thm:split} proves the identity.
+For $m=0$, only two empty tails occur and the value is 1.
+\end{proof}
+
+The C++17 validator enumerates allowed alphabets $T$, with small scalar
+arrays indexed by walk length and endpoint; it has no used-label mask
+inside a walk. It reads no producer $F$ table, colex rank, packed state row
+or expected numerical answer. For a maximum $M$, it computes $L_h(T)$
+through length $M$ once per alphabet. The same alphabet contributes to
+each smaller universe $\{1,\ldots,m\}$ with $m\geq\max T$, using
+the sign $(-1)^{m-|T|}$ and $Q_m(T)$.
+An alphabet containing a larger label contributes to no such smaller universe.
+This gives the full prefix in a single complete $2^M$-alphabet pass.
+
+The implementation loops over every $s=0,\ldots,v$ in the transition
+from label $v$, for each of $M$ lengths and two residue channels.
+For $M\geq1$, its exact number of these modular additions is
+\begin{equation}
+ I(M)=2^{M-1}M^2(M+3).
+ \label{eq:I}
+\end{equation}
+Each label belongs to $2^{M-1}$ alphabets and contributes $2M(v+1)$
+additions, proving the formula; $I(0)=0$.
+This excludes the endpoint totals, $Q_m$ products and sums, and state saves.
+It is a different work unit from $D(M)$ and is not a bound for one
+checkpoint quantum. For $M\geq3$, $I(M)=4M D(M)$.
+
+\subsection{Residues and reconstruction}
+
+Repeated-label walk counts and signed inclusion--exclusion partial sums
+need not obey a factorial bound. Instead, the validator evaluates all
+operations modulo
+\begin{equation}
+ P=2^{61}-1=2305843009213693951,\qquad
+ Q=2^{61}-3=2305843009213693949.
+ \label{eq:moduli}
+\end{equation}
+Both are odd and their difference is two, so $\gcd(P,Q)=1$.
+No primality assertion about either modulus is required. Residue addition
+and subtraction fit in unsigned 64-bit arithmetic, and multiplication of
+two reduced residues is smaller than $2^{122}$, fitting in unsigned 128 bits.
+Each operation is reduced modulo its channel's modulus.
+
+If the two complete residues for $a(n)$ are $r_P,r_Q$, the separate
+arbitrary-precision Python reconstruction computes
+\begin{equation}
+ z=r_P+P\bigl((r_Q-r_P)P^{-1}\bmod Q\bigr),\qquad 0\leq z<PQ.
+ \label{eq:crt}
+\end{equation}
+Here
+\[
+ PQ=5316911983139663482391856204266602499>30!.
+\]
+The bound $0\leq a(n)\leq n!$ therefore makes $z=a(n)$ for $n\leq30$,
+\emph{conditional on the residues being correct and complete}.
+A reconstructed value above $n!$ is rejected. A value below that bound
+alone cannot establish correct residue generation. Complete alphabet
+coverage, residue/state agreement and source/build identities are separately
+checked before comparison with the producer.
+
+\section{Implementation, evidence and validation boundaries}
+\label{sec:validation}
+
+\subsection{Recorded domains and dependence}
+
+Table~\ref{tab:validation} distinguishes complete counts from checks on a
+smaller domain. These are retained local executions and comparisons,
+not new enumerations performed to prepare the manuscript.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}
+ >{\raggedright\arraybackslash}p{0.15\textwidth}
+ >{\raggedright\arraybackslash}p{0.47\textwidth}@{}}
+\toprule
+Method & Domain checked & What is checked \\
+\midrule
+C weighted subset DP & $1,\ldots,28$ & Full producer counts, with all smaller prefixes reused \\
+C++ repeated-label IE plus Python CRT & $1,\ldots,28$ & Complete recount with different aggregation and modular arithmetic \\
+Unpacked scalar Python & $1,\ldots,18$ & Arbitrary-precision subset recurrence without colex or parity packing \\
+All permutations with interval predicate & $1,\ldots,8$ & Definition-level membership and complete small totals, without zero splitting \\
+Direct orders on each positive-label subset & All 128 subsets of $\{1,\ldots,7\}$ & Every small $F(S)$, including merged-state multiplicities \\
+\bottomrule
+\end{tabular}
+\caption{Actual local validation coverage. The Python scalar method was
+qualified through 17 and then applied to the completed run through 18;
+its evidence is inherited, not extended, in later runs.}
+\label{tab:validation}
+\end{table}
+
+The producer and IE share Theorem~\ref{thm:split}, the scalar transition,
+the actual label semantics and the product of the two tails. They are
+algorithmically distinct counts, not independent proofs of that theorem.
+The unpacked Python comparison also shares the zero-tail mathematics,
+subset recurrence and parity restriction, while storing full scalar rows.
+Its value is a different representation and arithmetic
+implementation at its stated indices.
+
+The interval predicate in Proposition~\ref{prop:interval} supplies a
+different mathematical test directly from the definition. The local suite
+exhaustively tests every permutation through $n=8$, obtaining
+$1,2,4,12,44,176,768,4000$. Its initial finite upper bound $H=n$ is
+harmless: the first constraint immediately tightens it to
+$H\leq p_1\leq n-1$. This check uses neither $F$, parity packing, colex
+nor the position of zero. It corroborates the shared reduction on that
+small domain, without constituting a direct census through 28.
+For the coefficient check, every ordering of each of the 128 subsets of
+$\{1,\ldots,7\}$ was tested by~\eqref{eq:tail}, its accepted orders counted,
+and that integer compared with the corresponding stored $F(S)$.
+The retained validation source and execution summary record this exhaustive
+small-subset comparison.
+
+All local numerical checks belong to the OpenAI/Codex-assisted maintenance
+workflow under the author's authorization; the C and C++ programs also
+share the GCC compiler family. Here algorithmic independence specifies
+the separation just described, not a verified third-party replication.
+External code-review reports describe further definition-based DP checks
+and fault sweeps; manuscript reviewers also report larger definition-based
+checks. Complete source and raw execution evidence for those reports were
+not all supplied. Those statements remain reviewer-reported evidence and
+do not enlarge the local domains in Table~\ref{tab:validation}.
+
+\subsection{Persistence and software qualification}
+
+The producer writes fixed-width little-endian counts and a chained journal
+of committed row ranges, binding source, build recipe, executable, maximum
+and encoding. Two layers are resident; three rotating layer files preserve
+the durable recovery boundary. Data are synchronized before the journal
+and control record commit. Recovery checks committed ranges and semantic
+state constraints before continuing. Earlier overwritten $W$ layers are
+not retained as complete historical layers: their transitions are not
+recomputed by this integrity audit. The serialized checkpoint layout is
+an implementation detail; mathematical reproduction uses the recurrences
+and indexing above. An incomplete run contributes no
+validated sequence value. Read-only integrity checking does not recompute
+the recurrence, and a digest authenticates retained bytes rather than
+proving the mathematical count.
+
+Interrupted-run, explicit-resume, no-clobber, invalid-input, thread-count
+and corruption regressions are recorded on bounded known domains.
+Current-source AddressSanitizer and UndefinedBehaviorSanitizer checks cover
+the prefix through 17 and its audit with leak detection disabled.
+Valgrind checks used a separate \texttt{-march=x86-64-v3} build compatible
+with the installed Valgrind, and cover 8 and its audit with zero reported
+errors or definite leaks, while a possible OpenMP runtime allocation is
+disclosed. ThreadSanitizer/Archer qualification is inherited from earlier
+instrumented builds with an unchanged parallel kernel; it is not a fresh
+clean ThreadSanitizer execution of the final production binary.
+These checks support their tested boundaries, not a universal absence of
+software defects or instrumented execution through 28.
+
+Original validator sources, their required inputs and execution records
+are retained locally. A reproducibility check can reconstruct the final
+28-row result from the small stored IE residue/control files and compare
+it with the native table without repeating either census. The original
+large native intermediate tables have been intentionally discarded after
+retaining the counts, completion records, source identities and validation
+inputs. A full native-table audit can therefore no longer be replayed on
+those original bytes; generating new tables would require a new execution.
+The retained journal and residue checks do not recompute those tables.
+The retained known-domain regression suite was originally run against its
+17-row baseline and must not be interpreted as a fresh test against the
+subsequently extended canonical file.
+
+The intended computational package is identified in~\cite{corti}.
+Its locators are prospective. Future public-package reproduction is
+separate from the retained local execution evidence used here.
+
+\section{Results and measured costs}
+\label{sec:results}
+
+\begin{proposition}[Recorded computational result]
+\label{prop:result}
+The author's runs completed on 16 November 2026 give the values of $a(n)$
+in Table~\ref{tab:terms} for $1\leq n\leq28$.
+The subset dynamic program and inclusion--exclusion/CRT agree row for row.
+In particular,
+\[
+ a(28)=1226245772785310491672576.
+\]
+\end{proposition}
+\begin{proof}[Computational proof]
+Theorem~\ref{thm:split} and Proposition~\ref{prop:dp} establish the
+exhaustive ordered producer count; Theorem~\ref{thm:ie} establishes the
+second count. The intermediate bounds in Section~\ref{sec:arithmetic}
+and the modular/CRT bounds in Section~\ref{sec:ie} cover the implemented
+arithmetic. The final completed run, on 16 November 2026, contains all
+28 native rows. Its IE control reaches all $2^{27}=134217728$ alphabets.
+The producer's journal descriptors partition the ranks
+$0,\ldots,\binom{27}{h}-1$ consecutively at each cardinality $h$;
+the terminal frontier is beyond the last layer. Colex generation is
+bijective on those ranks, so the stated loops cover every subset row.
+For $n\geq2$, the complementary-product loop evaluates successive chunks
+$[c,\min(c+q,2^{n-2}))$, where $c$ is its current cursor and $q$ the
+configured row quantum. Each chunk advances $c$ to its upper endpoint;
+the index completes only when that endpoint reaches $2^{n-2}$.
+The case $n=1$ is initialized directly to 1.
+The journal audit checks increasing cursors for partial chunks and records
+index completion, but does not separately check the last chunk's length.
+Coverage of that chunk rests on the loop semantics, rather than an
+independent journal partition check.
+The IE cursor advances consecutive disjoint alphabet ranges from zero
+to $2^{27}$, evaluating every alphabet once. The recorded producer reads
+are $D(27)=13589544960$, and the recorded IE transition additions are
+$I(27)=1467670855680$, agreeing with the exact work identities.
+The producer rejects a read counter above $D(27)$; IE rederives its
+expected addition count from the cursor. Counter equality corroborates
+this traversal; equality alone would not prove coverage, correct arithmetic
+or faithful execution. Completion and validation records bind the counts
+to the frozen programs. Exact CRT reconstruction agrees
+row for row with the native table, and all previous 26 rows agree with
+the earlier validated prefix. The supplementary checks and shared premises
+have precisely the scopes stated in Section~\ref{sec:validation}.
+This conclusion uses the proved recurrences, their implementations and
+the recorded executions; it is not an independent arithmetic certificate
+derived from the counters.
+\end{proof}
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{@{}rr@{\qquad}rr@{}}
+\toprule
+$n$ & $a(n)$ & $n$ & $a(n)$ \\
+\midrule
+1 & 1 & 15 & 4455645952 \\
+2 & 2 & 16 & 43468799232 \\
+3 & 4 & 17 & 445393216256 \\
+4 & 12 & 18 & 4783835680768 \\
+5 & 44 & 19 & 54372476838912 \\
+6 & 176 & 20 & 653068724224000 \\
+7 & 768 & 21 & 8169310794943488 \\
+8 & 4000 & 22 & 106298966614843392 \\
+9 & 22896 & 23 & 1449278709531697152 \\
+10 & 142336 & 24 & 20677932905765044224 \\
+11 & 967040 & 25 & 305457397455433007104 \\
+12 & 7258368 & 26 & 4667597748152564613120 \\
+13 & 57919872 & 27 & 74207848006226125996032 \\
+14 & 490253312 & 28 & 1226245772785310491672576 \\
+\bottomrule
+\end{tabular}
+\caption{The validated contiguous prefix. Indices $1$--$17$ reproduce the
+historical baseline attributed to Hardin~\cite{hardin}; indices $18$--$28$
+are the eleven additional locally validated values. The earlier preliminary
+appearance of candidates 18 and 19 is distinguished in Section~\ref{sec:intro}.}
+\label{tab:terms}
+\end{table}
+
+The canonical b-file contains exactly the 28 indexed data rows, with one
+terminal empty line. The native table has the same indexed values.
+Every value satisfies Proposition~\ref{prop:growth}. The first index not
+computed locally is $29$: neither the bounds nor the available related
+sequence data evaluate it from the retained results. No count at $29$ or
+$30$ is asserted, and this local endpoint makes no claim about the
+absence of external results.
+
+\subsection{Environment and elapsed service}
+
+The recorded host was an AMD Ryzen 9 7940HS with 8 cores and 16 hardware
+threads, running Linux Mint 22.3 with x86-64 kernel 6.17.0-42-generic and
+64 GB DDR5 installed RAM. The operating system reported
+66136649728 bytes of total memory at qualification.
+Both final numerical programs requested eight OpenMP workers, with dynamic
+teams disabled, placement by cores and binding enabled.
+The recorded toolchain is GCC/G++ 13.3.0, Python 3.12.3 and OpenSSL 3.0.13.
+The producer's numerical optimization flags were
+\texttt{-std=c17 -O3 -march=native -mtune=native -flto}
+\texttt{-funroll-loops -fomit-frame-pointer -fopenmp}; the IE build used
+\texttt{-std=c++17 -O3 -march=native -fopenmp}. Warning flags were
+\texttt{-Wall}, \texttt{-Wextra}, \texttt{-Wpedantic}, \texttt{-Wshadow},
+\texttt{-Wconversion}, \texttt{-Wdouble-promotion} and \texttt{-Wformat=2}.
+Both programs link against
+\texttt{libcrypto}; OpenMP uses
+\texttt{libgomp}. These hardware-specific binaries are retained historical
+artifacts, not interchangeable with a fresh build.
+
+The recorded numerical options can be expressed by the following templates,
+where \texttt{NEW} is an existing parent directory and its
+\texttt{prod} and \texttt{ie} children must not already exist:
+\begin{small}
+\begin{verbatim}
+src/a180205 run --root NEW/prod --max 28 \
+    --threads 8 --seconds 3000 --quantum 262144
+validation/ie run --root NEW/ie --max 28 \
+    --threads 8 --seconds 3000 --quantum 256
+python3 -B validation/crt.py NEW/ie/cnt.tsv --ie validation/ie
+\end{verbatim}
+\end{small}
+The producer additionally requires the preserved historical 17-term prefix
+in its canonical b-file location and verifies its fixed digest after
+canonicalizing that prefix. CRT checks that the IE source, build recipe,
+executable, residue text and completed control record have the bound
+identities. Rebuilt binaries do not replace the original execution identity.
+
+For the final maximum 28, measured producer elapsed service was about
+51 seconds and IE service about 1133 seconds. The sum of the four
+command-level elapsed wall times, including validation and consolidation,
+was about 1185 seconds (19 minutes 45 seconds), excluding operator pauses
+between commands. Both numerical engines completed
+in their first invocation, without resume. The IE measurement includes its
+state-save overhead; $I(M)$ alone is not a wall-time prediction.
+
+Equation~\eqref{eq:memory} gives 11133602048 bytes, or about 10.37 GiB,
+for the principal arrays at $M=27$. Adding the implementation's 256 MiB
+bookkeeping allowance gives about 10.62 GiB. These are allocation models:
+the final run's peak RSS was not measured. A separate earlier synthetic
+capacity-30 fixture allocated 45818139392 bytes of principal arrays and
+recorded 45821034496 bytes of peak RSS, about 42.67 GiB, using
+\texttt{getrusage}. This is a synthetic qualification measurement, not
+the run28 footprint or a computation through 30. Units GiB and MiB mean
+powers of two.
+
+\section{Conclusion}
+
+The unique zero label turns the inverse adjacent-sum condition into two
+ordered scalar walks. Retaining their integer multiplicities on actual
+label sets permits a complete subset enumeration, while parity and colex
+indexing reduce its memory requirements without changing the objects counted.
+Repeated-label inclusion--exclusion provides a second complete aggregation;
+coprime-modulus reconstruction is exact within the proved factorial bound.
+The resulting contiguous prefix reaches $28$, eleven values beyond the
+historical baseline used in this study. Definition-level testing is exhaustive
+only on its stated small domain, and both large enumerations retain a shared
+mathematical premise. The 28 finite values do not establish an asymptotic law
+or an exact recurrence for subsequent terms.
+
+\section*{Data availability}
+
+A local publication package accompanies this monolithic LaTeX manuscript;
+its public release is pending. It contains the producer and build recipe,
+complete count table and b-file, IE/CRT sources and original residue records,
+supplementary Python checks, selected original completion and qualification
+records, environment information and a bounded package verifier.
+Its indexed compressed evidence includes the original build identities and
+inputs required for the documented retained-result checks, without a private
+workspace dependency. Original large intermediate tables and obsolete
+diagnostic payloads are not retained or required by those checks.
+The resulting native-table replay limitation is stated in
+Section~\ref{sec:validation}. Enquiries may be addressed to the author
+at the email on the title page.
+The project reference~\cite{corti} specifies the
+intended GitHub repository and Zenodo archive; these are prospective
+locators, and the DOI is an author-designated placeholder. No existing public
+A180205 deposit is asserted.
+
+\section*{AI use disclosure}
+
+\begingroup\small\setlength{\baselineskip}{11pt}
+\noindent\textbf{Mathematical analysis.}
+OpenAI Codex generated and revised proof drafts and supported algorithm
+selection, arithmetic bounds and source reconciliation during
+15--17 November 2026. Exact historical model revisions were not recorded
+consistently. An earlier preliminary report
+attributed to Meta AI supplied the unadmitted candidates at 18 and 19.
+Local methodological notes, including the earlier four-window study, informed
+the strategy; an attempted live NotebookLM consultation did not produce a
+usable response and is not cited as evidence. Mathematical assertions rest
+on the proofs, primary sources and retained artifacts, not on conversational
+assertions or model agreement.
+
+\smallskip
+\noindent\textbf{Algorithm and code.}
+OpenAI Codex generated and revised the C17 producer, C++17 IE validator
+and Python CRT driver, and supported validation design and local artifact
+checks. The maintainer name Luna in the source headers denotes this
+assistant. The author selected the computational objectives and stopping
+point and executed the official numerical runs and their validation steps.
+These acts are distinct from the assistant-assisted programmatic checks;
+no unaided human re-enumeration or individually logged unaided rederivation
+of every proof is claimed. Code-review reports
+used the tool or vendor designations ChatGPT, Claude, DeepSeek, Gemini,
+GLM, Grok, Kimi, Meta AI, MiniMax, Mistral and Qwen; follow-up reports
+came from Claude, MiniMax, Meta AI and GLM. Exact backend identities and
+versions were not consistently authenticated. A supplied MiniMax review-side
+Python implementation was retained, inspected, qualified locally and used
+for the scalar comparison through 18. Reported external computations are
+distinguished from retained local execution evidence.
+
+\smallskip
+\noindent\textbf{Manuscript.}
+OpenAI/Codex assisted with drafting, literature checks, internal review,
+compilation and artifact verification. Numerical claims were reconciled with
+the frozen count tables, b-file, validator sources and original receipts.
+The first external manuscript round supplied reports designated ChatGPT,
+Claude, DeepSeek, Grok, Meta AI, MiniMax and Qwen. The focused second round
+supplied Claude and MiniMax reports. A separate first-round MiniMax Python
+check was also executed locally (direct predicate through 8, scalar recurrence
+through 10, stored-residue CRT through 28), without enlarging the validation
+domains. The reports' findings were
+checked against sources and artifacts; claimed executions without full
+reproducible evidence remain reported observations. These designations do
+not authenticate exact backends. Internal checks and same-family agreement
+do not constitute independent third-party replication.
+
+\smallskip
+Carlo Corti is the sole author and takes full scientific responsibility for
+the mathematical statements, implementation, numerical results, validation
+boundaries and conclusions.\par
+\endgroup
+
+\clearpage
+\begin{thebibliography}{99}
+
+\bibitem{hardin}
+R. H. Hardin,
+\emph{Number of permutations of 0..(n-1) representable as consecutive
+sums of 2 adjacent elements of a sequence of n+1 nonnegative integers},
+OEIS A180205, author date 15 August 2010,
+\url{https://oeis.org/A180205}. OEIS revision 9, with the historical
+17-term data already in revision 1; official OEIS export dated
+16 November 2026, consulted November 2026;
+\url{https://github.com/oeis/oeisdata}.
+
+\bibitem{a180206}
+R. H. Hardin,
+\emph{Number of permutations of 0..(n-1) representable as consecutive sums of 3 adjacent elements of a sequence of n+2 nonnegative integers},
+OEIS A180206, author date 15 August 2010,
+\url{https://oeis.org/A180206}.
+Official OEIS export consulted November 2026.
+
+\bibitem{a180207}
+R. H. Hardin,
+\emph{Number of permutations of 0..(n-1) representable as consecutive sums of 4 adjacent elements of a sequence of n+3 nonnegative integers},
+OEIS A180207, author date 15 August 2010,
+\url{https://oeis.org/A180207}.
+Extension through $n=22$ by Carlo Corti, 13 November 2026.
+Official OEIS export consulted November 2026.
+
+\bibitem{a180208}
+R. H. Hardin,
+\emph{Number of permutations of 0..(n-1) representable as consecutive sums of 5 adjacent elements of a sequence of n+4 nonnegative integers},
+OEIS A180208, author date 15 August 2010,
+\url{https://oeis.org/A180208}.
+Official OEIS export consulted November 2026.
+
+\bibitem{a180209}
+R. H. Hardin,
+\emph{Number of permutations of 0..(n-1) representable as consecutive sums of 6 adjacent elements of a sequence of n+5 nonnegative integers},
+OEIS A180209, author date 15 August 2010,
+\url{https://oeis.org/A180209}.
+Official OEIS export consulted November 2026.
+
+\bibitem{a180210}
+R. H. Hardin,
+\emph{Number of permutations of 0..(n-1) representable as consecutive sums of 7 adjacent elements of a sequence of n+6 nonnegative integers},
+OEIS A180210, author date 15 August 2010,
+\url{https://oeis.org/A180210}.
+Official OEIS export consulted November 2026.
+
+\bibitem{a180211}
+R. H. Hardin,
+\emph{Number of permutations of 0..(n-1) representable as consecutive sums of 8 adjacent elements of a sequence of n+7 nonnegative integers},
+OEIS A180211, author date 15 August 2010,
+\url{https://oeis.org/A180211}.
+Official OEIS export consulted November 2026.
+
+\bibitem{a180212}
+R. H. Hardin,
+\emph{Number of permutations of 0..(n-1) representable as consecutive sums of 9 adjacent elements of a sequence of n+8 nonnegative integers},
+OEIS A180212, author date 15 August 2010,
+\url{https://oeis.org/A180212}.
+Official OEIS export consulted November 2026.
+
+\bibitem{four}
+C. Corti,
+\emph{Exact Enumeration of Four-Window Permutations: OEIS A180207 through
+$n=22$}, 2026,
+\url{https://doi.org/10.5281/zenodo.24194032}.
+The DOI identifies the computational package release series; the cited
+manuscript is its accompanying article.
+
+\bibitem{a391643}
+G. Wiseman,
+\emph{Number of integer compositions n that are the first sums of a unique nonnegative sequence},
+OEIS A391643, author date 4 January 2026, first index 1,
+\url{https://oeis.org/A391643}.
+Formula and table contributions by C. Sievers. Official entry consulted November 2026.
+
+\bibitem{a391645}
+G. Wiseman,
+\emph{Number of integer compositions of n that are not the first sums of any finite nonnegative sequence},
+OEIS A391645, author date 5 January 2026, first index 1,
+\url{https://oeis.org/A391645}.
+Formula and table contributions by C. Sievers. Official entry consulted November 2026.
+
+\bibitem{a391621}
+G. Wiseman,
+\emph{Number of nonnegative integer sequences whose first sums are the k-th composition in standard order},
+OEIS A391621, author date 19 December 2025, first index 1,
+\url{https://oeis.org/A391621}.
+Table by A. Eldar. Official entry consulted November 2026.
+
+\bibitem{a391681}
+G. Wiseman,
+\emph{Number of integer compositions of n with all parts > 1 that are not the first sums of any composition},
+OEIS A391681, author date 6 January 2026, first index 1,
+\url{https://oeis.org/A391681}.
+Formula and table contributions by C. Sievers. Official entry consulted November 2026.
+
+\bibitem{a390567}
+G. Wiseman,
+\emph{Number of integer compositions of n with all distinct first sums},
+OEIS A390567, author date 15 November 2025, first index 0,
+\url{https://oeis.org/A390567}.
+Extension through total 40 by C. Sievers. Official entry consulted November 2026.
+
+\bibitem{differences}
+V. Jovovic,
+\emph{Number of permutations of $\{1,2,\ldots,n\}$ for which differences
+of adjacent numbers are all distinct},
+OEIS A131529, 26 August 2007,
+\url{https://oeis.org/A131529}.
+Extensions by R. J. Mathar and R. H. Hardin; consulted November 2026.
+
+\bibitem{colex}
+V. Kruchinin, Y. Shablya, D. Kruchinin and V. Rulevskiy,
+Unranking Small Combinations of a Large Set in Co-Lexicographic Order,
+\emph{Algorithms} \textbf{15}(2) (2022), article 36,
+\url{https://doi.org/10.3390/a15020036}.
+
+\bibitem{gcc}
+GNU Project,
+\emph{Using the GNU Compiler Collection}, GCC 13.3.0,
+Section 6.9, 128-bit Integers,
+\url{https://gcc.gnu.org/onlinedocs/gcc-13.3.0/gcc/_005f_005fint128.html},
+consulted November 2026.
+
+\bibitem{corti}
+C. Corti,
+\emph{Exact Enumeration of Adjacent-Sum Permutations: OEIS A180205 through
+$n=28$}, GitHub repository and Zenodo archive, 2026.
+\url{https://github.com/carcorti/A180205};
+\url{https://doi.org/10.5281/zenodo.xxxxxxxx}.
+
+\end{thebibliography}
+\end{document}

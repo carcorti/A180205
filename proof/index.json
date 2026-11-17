@@ -1,0 +1,3494 @@
+{
+  "schema": 1,
+  "owner": "Carlo Corti",
+  "date": "2026-11-17",
+  "archive": "proof/proof.tgz",
+  "sha256": "3dd91151e3d5d8c4aedc79c566102176fd5253e7c79e633bc8bcf0070dbfa2f6",
+  "compressed_bytes": 266906,
+  "expanded_unique_bytes": 1834065,
+  "records": [
+    {
+      "original": "outputs/dev0/arith.c",
+      "bytes": 361,
+      "sha256": "03750d6dc8335bfa842b840d880803e4f4be451d08aca14b7950bc05176076ad",
+      "mode": 436,
+      "roles": [
+        "generator/source for retained diagnostic qualification"
+      ],
+      "member": "d000001"
+    },
+    {
+      "original": "outputs/dev0/arith.out",
+      "bytes": 158,
+      "sha256": "7b5da87b58640ce5d910bc57cce373564a20bc6de594491f79787bd5eefc9e47",
+      "mode": 436,
+      "roles": [
+        "historical qualification R04"
+      ],
+      "member": "d000002"
+    },
+    {
+      "original": "outputs/dev0/arith.py",
+      "bytes": 365,
+      "sha256": "14d7b011af649a9f8bddb94b7c4d05108e9b7dad98b47cd95da5b7491152deb3",
+      "mode": 436,
+      "roles": [
+        "generator/source for retained diagnostic qualification"
+      ],
+      "member": "d000003"
+    },
+    {
+      "original": "outputs/dev0/closure.log",
+      "bytes": 533,
+      "sha256": "d8a37419ff1c130c43043eef555a3a8475eb132d16e0eb1bf52ab696c1fa2c6c",
+      "mode": 436,
+      "roles": [
+        "historical qualification B01",
+        "original qualification or scalar comparison execution trace"
+      ],
+      "member": "d000004"
+    },
+    {
+      "original": "outputs/dev0/edgeio.c",
+      "bytes": 1137,
+      "sha256": "c167462e44159cd7538f0c0b6f57e784b08c923b5febc221e52933e9e5abab88",
+      "mode": 436,
+      "roles": [
+        "generator/source for retained diagnostic qualification"
+      ],
+      "member": "d000005"
+    },
+    {
+      "original": "outputs/dev0/enospc.out",
+      "bytes": 80,
+      "sha256": "bf0f0c018831c578127cc875b66aaa133db211609e07c4779cab09c867930c96",
+      "mode": 436,
+      "roles": [
+        "historical qualification O01"
+      ],
+      "member": "d000006"
+    },
+    {
+      "original": "outputs/dev0/env.json",
+      "bytes": 6985,
+      "sha256": "d99975e4d5e9670e0047ce6ca0c87c5ff86f2b07f7487892266034055617e560",
+      "mode": 436,
+      "roles": [
+        "scientific scope/provenance, environment, measured qualification or inheritance"
+      ],
+      "member": "d000007"
+    },
+    {
+      "original": "outputs/dev0/fault.c",
+      "bytes": 344,
+      "sha256": "12b8daf9e4f51d100d9c4b7a9d2869d2ca206564c88845974386a762382668cc",
+      "mode": 436,
+      "roles": [
+        "generator/source for retained diagnostic qualification"
+      ],
+      "member": "d000008"
+    },
+    {
+      "original": "outputs/dev0/fault.py",
+      "bytes": 920,
+      "sha256": "595350286b80e8833fb26b3d55b5f6ef9e20772d14b876a4394fb0d03a744912",
+      "mode": 436,
+      "roles": [
+        "generator/source for retained diagnostic qualification"
+      ],
+      "member": "d000009"
+    },
+    {
+      "original": "outputs/dev0/finalid.out",
+      "bytes": 498,
+      "sha256": "0cd62dca510e52b3b32c61580b3cdb4906543706c276009495da3a97ac970e4d",
+      "mode": 436,
+      "roles": [
+        "historical qualification I01"
+      ],
+      "member": "d000010"
+    },
+    {
+      "original": "outputs/dev0/heart.c",
+      "bytes": 408,
+      "sha256": "b648a7db5ecc867594603e7f1390f1a606757d0e142c94102b5c73002eb6c37d",
+      "mode": 436,
+      "roles": [
+        "generator/source for retained diagnostic qualification"
+      ],
+      "member": "d000011"
+    },
+    {
+      "original": "outputs/dev0/heartbeat.err",
+      "bytes": 259,
+      "sha256": "77afd8ddf435a4b9a721568e17c1c3d30ab42c34907e7b0648d181f2ede16d30",
+      "mode": 436,
+      "roles": [
+        "historical qualification R05"
+      ],
+      "member": "d000012"
+    },
+    {
+      "original": "outputs/dev0/hostileclosed.out",
+      "bytes": 159,
+      "sha256": "7da1fd4fc361bd249e6ff607dd83dae2d6b807a02b16a282ac161807a0179a15",
+      "mode": 436,
+      "roles": [
+        "historical qualification N04"
+      ],
+      "member": "d000013"
+    },
+    {
+      "original": "outputs/dev0/ieextra.py",
+      "bytes": 1193,
+      "sha256": "d1021a6856c1fa1d4bd9ba5bd0e366cdd52f0bf894e6cda1e5193f4d3b3b6740",
+      "mode": 436,
+      "roles": [
+        "generator/source for retained diagnostic qualification"
+      ],
+      "member": "d000014"
+    },
+    {
+      "original": "outputs/dev0/ieextras.out",
+      "bytes": 73,
+      "sha256": "ceccb226e5ff3df4e405b963a99e12aca13870a7d4409a6fedfe2cea5aee661f",
+      "mode": 436,
+      "roles": [
+        "historical qualification N05"
+      ],
+      "member": "d000015"
+    },
+    {
+      "original": "outputs/dev0/iehold.cpp",
+      "bytes": 504,
+      "sha256": "ce2faae91f8962559e2341be7f278b3571d719708d68038a88b2d31eead6e818",
+      "mode": 436,
+      "roles": [
+        "generator/source for retained diagnostic qualification"
+      ],
+      "member": "d000016"
+    },
+    {
+      "original": "outputs/dev0/ierun.cpp",
+      "bytes": 1017,
+      "sha256": "8cde136c226d65da8e2a4bda1d058202f9b7e22123b03872fe875a0bb92954f7",
+      "mode": 436,
+      "roles": [
+        "generator/source for retained diagnostic qualification"
+      ],
+      "member": "d000017"
+    },
+    {
+      "original": "outputs/dev0/ieruntime.out",
+      "bytes": 189,
+      "sha256": "742fa958a579bf02af00e7a976d0e38225317627b276c4e502afbc99cd6308df",
+      "mode": 436,
+      "roles": [
+        "historical qualification R03"
+      ],
+      "member": "d000018"
+    },
+    {
+      "original": "outputs/dev0/iofinal.out",
+      "bytes": 145,
+      "sha256": "002c80bf0f0d9157dd61c059384f8ef0a9819d2f03b6415c4983827b4adcf942",
+      "mode": 436,
+      "roles": [
+        "historical qualification R02"
+      ],
+      "member": "d000019"
+    },
+    {
+      "original": "outputs/dev0/lastasan/src/Makefile",
+      "bytes": 642,
+      "sha256": "42a5bca6d18c3b277860c8bf8c7907ef65508626ac2eb4fadc75f27d7f3f5861",
+      "mode": 436,
+      "roles": [
+        "original instrumented/alternate-compiler source and build recipe"
+      ],
+      "member": "d000020"
+    },
+    {
+      "original": "outputs/dev0/lastasan/src/a180205.c",
+      "bytes": 27140,
+      "sha256": "9efbc68edc9a9a0e27e3898ac4fd2e4b4e9b069e6d4a6d81f3b9be90ebdc1470",
+      "mode": 436,
+      "roles": [
+        "original instrumented/alternate-compiler source and build recipe"
+      ],
+      "member": "d000021"
+    },
+    {
+      "original": "outputs/dev0/lastasan/validation/ie.cpp",
+      "bytes": 10570,
+      "sha256": "acbf71bbb59cb3349b949d47583361f2c102a98bcf42d5b7030241508efe37af",
+      "mode": 436,
+      "roles": [
+        "original instrumented/alternate-compiler source and build recipe"
+      ],
+      "public": "check/ie.cpp"
+    },
+    {
+      "original": "outputs/dev0/lastasanfull.log",
+      "bytes": 174,
+      "sha256": "4a210a500cf81d9523b2c7fd4b5f813e7897211eccea502e8fddc6f0fccd0713",
+      "mode": 436,
+      "roles": [
+        "original qualification or scalar comparison execution trace"
+      ],
+      "member": "d000022"
+    },
+    {
+      "original": "outputs/dev0/lastclang.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 436,
+      "roles": [
+        "historical qualification B02"
+      ],
+      "member": "d000023"
+    },
+    {
+      "original": "outputs/dev0/lastclang/src/Makefile",
+      "bytes": 642,
+      "sha256": "42a5bca6d18c3b277860c8bf8c7907ef65508626ac2eb4fadc75f27d7f3f5861",
+      "mode": 436,
+      "roles": [
+        "original instrumented/alternate-compiler source and build recipe"
+      ],
+      "member": "d000020"
+    },
+    {
+      "original": "outputs/dev0/lastclang/src/a180205.c",
+      "bytes": 27140,
+      "sha256": "9efbc68edc9a9a0e27e3898ac4fd2e4b4e9b069e6d4a6d81f3b9be90ebdc1470",
+      "mode": 436,
+      "roles": [
+        "original instrumented/alternate-compiler source and build recipe"
+      ],
+      "member": "d000021"
+    },
+    {
+      "original": "outputs/dev0/lastclang/validation/ie.cpp",
+      "bytes": 10570,
+      "sha256": "acbf71bbb59cb3349b949d47583361f2c102a98bcf42d5b7030241508efe37af",
+      "mode": 436,
+      "roles": [
+        "original instrumented/alternate-compiler source and build recipe"
+      ],
+      "public": "check/ie.cpp"
+    },
+    {
+      "original": "outputs/dev0/lasttsan/src/Makefile",
+      "bytes": 642,
+      "sha256": "42a5bca6d18c3b277860c8bf8c7907ef65508626ac2eb4fadc75f27d7f3f5861",
+      "mode": 436,
+      "roles": [
+        "original instrumented/alternate-compiler source and build recipe"
+      ],
+      "member": "d000020"
+    },
+    {
+      "original": "outputs/dev0/lasttsan/src/a180205.c",
+      "bytes": 27140,
+      "sha256": "9efbc68edc9a9a0e27e3898ac4fd2e4b4e9b069e6d4a6d81f3b9be90ebdc1470",
+      "mode": 436,
+      "roles": [
+        "original instrumented/alternate-compiler source and build recipe"
+      ],
+      "member": "d000021"
+    },
+    {
+      "original": "outputs/dev0/lasttsan/validation/ie.cpp",
+      "bytes": 10570,
+      "sha256": "acbf71bbb59cb3349b949d47583361f2c102a98bcf42d5b7030241508efe37af",
+      "mode": 436,
+      "roles": [
+        "original instrumented/alternate-compiler source and build recipe"
+      ],
+      "public": "check/ie.cpp"
+    },
+    {
+      "original": "outputs/dev0/lasttsanfull.log",
+      "bytes": 173,
+      "sha256": "493384ee6ffc173ae72ce5bf4639af137fe4de101a5ec3f98a0c43db8ca80950",
+      "mode": 436,
+      "roles": [
+        "original qualification or scalar comparison execution trace"
+      ],
+      "member": "d000024"
+    },
+    {
+      "original": "outputs/dev0/leakcheck.err",
+      "bytes": 1548,
+      "sha256": "495328f3bce45e2d70fc0f1a02a858339053ca562a7def76f507f0c984f1c77a",
+      "mode": 436,
+      "roles": [
+        "historical qualification O02",
+        "original qualification or scalar comparison execution trace"
+      ],
+      "member": "d000025"
+    },
+    {
+      "original": "outputs/dev0/ledger.json",
+      "bytes": 13146,
+      "sha256": "ba8620977dfedd4eda09a403e3cd5543a8d008f147e2407cd55ccb7be9ed1c10",
+      "mode": 436,
+      "roles": [
+        "current qualification N03",
+        "current qualification N05",
+        "current qualification R01",
+        "current qualification R02",
+        "current qualification R03",
+        "current qualification R04",
+        "current qualification R05",
+        "current qualification S01",
+        "scientific scope/provenance, environment, measured qualification or inheritance"
+      ],
+      "member": "d000026"
+    },
+    {
+      "original": "outputs/dev0/lock.log",
+      "bytes": 95,
+      "sha256": "97bc1f1bb0b85a7d79d6ef70543251c671da8839a1059857097e84a313faec02",
+      "mode": 436,
+      "roles": [
+        "historical qualification E01"
+      ],
+      "member": "d000027"
+    },
+    {
+      "original": "outputs/dev0/metrics.json",
+      "bytes": 2836,
+      "sha256": "b8eb1dfea786ee21e80cc9629f1ceeb2279774fde4e14c8f1fdc2b19e9d2d413",
+      "mode": 436,
+      "roles": [
+        "scientific scope/provenance, environment, measured qualification or inheritance"
+      ],
+      "member": "d000028"
+    },
+    {
+      "original": "outputs/dev0/numprobe.c",
+      "bytes": 878,
+      "sha256": "26f04e118b4e8c6d74ec0e0206ed73687912d04f9461a42ba9dee4f6dd45bf90",
+      "mode": 436,
+      "roles": [
+        "generator/source for retained diagnostic qualification"
+      ],
+      "member": "d000029"
+    },
+    {
+      "original": "outputs/dev0/numprobe.py",
+      "bytes": 318,
+      "sha256": "6ead0c77c18c783cdd10d732594f038415890b095aae8f886c5c48a41794c32a",
+      "mode": 436,
+      "roles": [
+        "generator/source for retained diagnostic qualification"
+      ],
+      "member": "d000030"
+    },
+    {
+      "original": "outputs/dev0/omptest.c",
+      "bytes": 423,
+      "sha256": "6a57e13193b7b657a4eae16a6f166d966fa03b94ff600100c6e637a2a21b64fa",
+      "mode": 436,
+      "roles": [
+        "generator/source for retained diagnostic qualification"
+      ],
+      "member": "d000031"
+    },
+    {
+      "original": "outputs/dev0/peakfinal.err",
+      "bytes": 748,
+      "sha256": "0196dacd84eee5e41fc80a0efc4bbb6eb347a104c3cc3abbd340695f6b374c39",
+      "mode": 436,
+      "roles": [
+        "original qualification or scalar comparison execution trace"
+      ],
+      "member": "d000032"
+    },
+    {
+      "original": "outputs/dev0/peakfinal.out",
+      "bytes": 291,
+      "sha256": "974253c04880f8254357d882f3e4e53c425f2c5459fb5c599b34c0d48272d5ce",
+      "mode": 436,
+      "roles": [
+        "historical qualification R01",
+        "original qualification or scalar comparison execution trace"
+      ],
+      "member": "d000033"
+    },
+    {
+      "original": "outputs/dev0/person2.log",
+      "bytes": 80,
+      "sha256": "18d4a8ff7fb70c99f373e5d1b5615694bcc76cdd89590cb2c78533714b6e04ed",
+      "mode": 436,
+      "roles": [
+        "historical qualification I02"
+      ],
+      "member": "d000034"
+    },
+    {
+      "original": "outputs/dev0/rbscalar17.err",
+      "bytes": 3056,
+      "sha256": "6360d2f4234cdb8eee56acef4976b9bd7be68bd7f01e5e623ab28b9bbb4e9a75",
+      "mode": 436,
+      "roles": [
+        "original qualification or scalar comparison execution trace"
+      ],
+      "member": "d000035"
+    },
+    {
+      "original": "outputs/dev0/rbscalar17.out",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 436,
+      "roles": [
+        "original qualification or scalar comparison execution trace"
+      ],
+      "member": "d000023"
+    },
+    {
+      "original": "outputs/dev0/rcasanfull.log",
+      "bytes": 173,
+      "sha256": "ceaefcea667fc6c2f52a03e2dc76e2d9e396294730413f28d14bb31ab3c21c4b",
+      "mode": 436,
+      "roles": [
+        "original qualification or scalar comparison execution trace"
+      ],
+      "member": "d000036"
+    },
+    {
+      "original": "outputs/dev0/rcchk2.json",
+      "bytes": 138,
+      "sha256": "ffde76124c154133d28e760ab821c394bbd48585b89694a22ca8dc910e2b94c2",
+      "mode": 436,
+      "roles": [
+        "historical qualification G01"
+      ],
+      "member": "d000037"
+    },
+    {
+      "original": "outputs/dev0/rctsanfull.log",
+      "bytes": 173,
+      "sha256": "0512a103e5b2900d03d19f360664908e6305e5382a36566ebb4366d0cadbef0f",
+      "mode": 436,
+      "roles": [
+        "original qualification or scalar comparison execution trace"
+      ],
+      "member": "d000038"
+    },
+    {
+      "original": "outputs/dev0/rcvg/src/Makefile",
+      "bytes": 642,
+      "sha256": "42a5bca6d18c3b277860c8bf8c7907ef65508626ac2eb4fadc75f27d7f3f5861",
+      "mode": 436,
+      "roles": [
+        "original instrumented/alternate-compiler source and build recipe"
+      ],
+      "member": "d000020"
+    },
+    {
+      "original": "outputs/dev0/rcvg/src/a180205.c",
+      "bytes": 26264,
+      "sha256": "9fc7ede891cb16d41b621128f6d812ac498b27dbbca4c535ba0e0760cfc58c43",
+      "mode": 436,
+      "roles": [
+        "original instrumented/alternate-compiler source and build recipe"
+      ],
+      "member": "d000039"
+    },
+    {
+      "original": "outputs/dev0/rcvg/validation/ie.cpp",
+      "bytes": 10570,
+      "sha256": "acbf71bbb59cb3349b949d47583361f2c102a98bcf42d5b7030241508efe37af",
+      "mode": 436,
+      "roles": [
+        "original instrumented/alternate-compiler source and build recipe"
+      ],
+      "public": "check/ie.cpp"
+    },
+    {
+      "original": "outputs/dev0/rev2befored.out",
+      "bytes": 111,
+      "sha256": "c7b267cc6121b80e3e84b5810d58799243b05c72cb621c50c4612951b39ebb16",
+      "mode": 436,
+      "roles": [
+        "current qualification D02"
+      ],
+      "member": "d000040"
+    },
+    {
+      "original": "outputs/dev0/rev2clangcmp.out",
+      "bytes": 62,
+      "sha256": "0b31ba3172c487c2f3a11da32562db0906b1ed134aa0e16ef675dfaaa3eeb983",
+      "mode": 436,
+      "roles": [
+        "current qualification B02"
+      ],
+      "member": "d000041"
+    },
+    {
+      "original": "outputs/dev0/rev2controller.out",
+      "bytes": 409,
+      "sha256": "07f4150fb43ca850b8870e4468459667d3cf1cb68ad8550cceb87e1ac51d91b0",
+      "mode": 436,
+      "roles": [
+        "current qualification R06"
+      ],
+      "member": "d000042"
+    },
+    {
+      "original": "outputs/dev0/rev2delta.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 436,
+      "roles": [
+        "current qualification D01"
+      ],
+      "member": "d000023"
+    },
+    {
+      "original": "outputs/dev0/rev2delta.out",
+      "bytes": 195,
+      "sha256": "7424712970feedc840afedaa4b5e45ef6e082f30eed46c3c5d9c12ca5d3052a2",
+      "mode": 436,
+      "roles": [
+        "current qualification D01"
+      ],
+      "member": "d000043"
+    },
+    {
+      "original": "outputs/dev0/rev2hostile.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 436,
+      "roles": [
+        "current qualification N04"
+      ],
+      "member": "d000023"
+    },
+    {
+      "original": "outputs/dev0/rev2hostile.out",
+      "bytes": 159,
+      "sha256": "7da1fd4fc361bd249e6ff607dd83dae2d6b807a02b16a282ac161807a0179a15",
+      "mode": 436,
+      "roles": [
+        "current qualification N04"
+      ],
+      "member": "d000013"
+    },
+    {
+      "original": "outputs/dev0/scan.err",
+      "bytes": 661,
+      "sha256": "a204cf35ac0cca5f8ae60fd67aa6b93f4f4b8e2d761d750bb0a6dae5b532fe00",
+      "mode": 436,
+      "roles": [
+        "historical qualification S01"
+      ],
+      "member": "d000044"
+    },
+    {
+      "original": "outputs/dev0/synth.c",
+      "bytes": 1840,
+      "sha256": "378c89bd1b60071a8b4f6a4b1c542f09ac4f783133368ea875037b879a17b7ce",
+      "mode": 436,
+      "roles": [
+        "generator/source for retained diagnostic qualification",
+        "scientific scope/provenance, environment, measured qualification or inheritance"
+      ],
+      "member": "d000045"
+    },
+    {
+      "original": "outputs/dev0/test15/check17.err",
+      "bytes": 350,
+      "sha256": "ce8ccbd830fe52f66208b6cca13392dcf4618354d835a1f2574e4ed9ea2f40f6",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000046"
+    },
+    {
+      "original": "outputs/dev0/test15/cli0.err",
+      "bytes": 52,
+      "sha256": "fb5c5a2c2e3ce2faf5cd36536b36745f882190fec22d029ad650065b63acd46a",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000047"
+    },
+    {
+      "original": "outputs/dev0/test15/cli1.err",
+      "bytes": 39,
+      "sha256": "3a5e8f2b214fd0027a2ab0473156dd3c9bd38e00815b609108da5eb46b19475e",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000048"
+    },
+    {
+      "original": "outputs/dev0/test15/cli10.err",
+      "bytes": 39,
+      "sha256": "3a5e8f2b214fd0027a2ab0473156dd3c9bd38e00815b609108da5eb46b19475e",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000048"
+    },
+    {
+      "original": "outputs/dev0/test15/cli11.err",
+      "bytes": 39,
+      "sha256": "3a5e8f2b214fd0027a2ab0473156dd3c9bd38e00815b609108da5eb46b19475e",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000048"
+    },
+    {
+      "original": "outputs/dev0/test15/cli12.err",
+      "bytes": 47,
+      "sha256": "dd31cb8df7394ee5853bb0f0f4a4a447d9bb028f087d29df4931bb326bd19207",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000049"
+    },
+    {
+      "original": "outputs/dev0/test15/cli2.err",
+      "bytes": 51,
+      "sha256": "3c85c3ea28887a92b6fda73d34587ee3eb250f967cc81ddae0130d7b229702cf",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000050"
+    },
+    {
+      "original": "outputs/dev0/test15/cli3.err",
+      "bytes": 51,
+      "sha256": "3c85c3ea28887a92b6fda73d34587ee3eb250f967cc81ddae0130d7b229702cf",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000050"
+    },
+    {
+      "original": "outputs/dev0/test15/cli4.err",
+      "bytes": 39,
+      "sha256": "3a5e8f2b214fd0027a2ab0473156dd3c9bd38e00815b609108da5eb46b19475e",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000048"
+    },
+    {
+      "original": "outputs/dev0/test15/cli5.err",
+      "bytes": 51,
+      "sha256": "3c85c3ea28887a92b6fda73d34587ee3eb250f967cc81ddae0130d7b229702cf",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000050"
+    },
+    {
+      "original": "outputs/dev0/test15/cli6.err",
+      "bytes": 51,
+      "sha256": "3c85c3ea28887a92b6fda73d34587ee3eb250f967cc81ddae0130d7b229702cf",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000050"
+    },
+    {
+      "original": "outputs/dev0/test15/cli7.err",
+      "bytes": 43,
+      "sha256": "63d444fa47161b1f78d062dbc170b6cf22caafa2555131216c21ce55fdbab063",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000051"
+    },
+    {
+      "original": "outputs/dev0/test15/cli8.err",
+      "bytes": 32,
+      "sha256": "ceb0fc753282c1c650678e5be83827efcb479779345f5d263faa7cf29f8bc82d",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000052"
+    },
+    {
+      "original": "outputs/dev0/test15/cli9.err",
+      "bytes": 39,
+      "sha256": "3a5e8f2b214fd0027a2ab0473156dd3c9bd38e00815b609108da5eb46b19475e",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000048"
+    },
+    {
+      "original": "outputs/dev0/test15/complete.err",
+      "bytes": 598,
+      "sha256": "8c10eeb0bf428bda322f86c600fc74a05d8aba8c5bb2a5b61ec7e2c8fad27383",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000053"
+    },
+    {
+      "original": "outputs/dev0/test15/corrupt100.err",
+      "bytes": 143,
+      "sha256": "61119bd3abf19ae13e23fada0604246a2e5799da8db7a8dba35e01b21e5c7173",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000054"
+    },
+    {
+      "original": "outputs/dev0/test15/corrupt1030.err",
+      "bytes": 141,
+      "sha256": "0e10775b50dbf861aa4de21bc7d93e8159bc9e839acea9aca078eefe19c02c0d",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000055"
+    },
+    {
+      "original": "outputs/dev0/test15/corrupt32.err",
+      "bytes": 137,
+      "sha256": "17ba6c77723b679074173cc34b5b8baa9df7102b1c732f8eea3ca843007a0142",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000056"
+    },
+    {
+      "original": "outputs/dev0/test15/corrupt4.err",
+      "bytes": 400,
+      "sha256": "6278245d28e96245fb1238c30701722edddd7c35fd9f32a0f335b44dad0ed45b",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000057"
+    },
+    {
+      "original": "outputs/dev0/test15/crtexact.out",
+      "bytes": 150,
+      "sha256": "cf1771a57c1137c3fb26cc760653f4d589c1a98a23023c6966bac5e58d171e29",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000058"
+    },
+    {
+      "original": "outputs/dev0/test15/crtself.out",
+      "bytes": 18,
+      "sha256": "429ca665f8133156094e85b4e7647baad7286462d761228e3f759edab316a788",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000059"
+    },
+    {
+      "original": "outputs/dev0/test15/iecheck.err",
+      "bytes": 120,
+      "sha256": "b3481355142709ca1fa96cafaed7a96773382df873f0fc4c41763963cb212821",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000060"
+    },
+    {
+      "original": "outputs/dev0/test15/iemax17.err",
+      "bytes": 110,
+      "sha256": "ba789d7e4b0d0faad675917782e4578fe99a7dfca0f3693c6351efcf2ef8d8a5",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000061"
+    },
+    {
+      "original": "outputs/dev0/test15/ieself.out",
+      "bytes": 63,
+      "sha256": "90240f94f0a6f6fe4388630c084a75ee498d6225469819d02b52fac3df28f5ee",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000062"
+    },
+    {
+      "original": "outputs/dev0/test15/interrupt.err",
+      "bytes": 570,
+      "sha256": "701289978dce17c9c38d3b54ef4aad6c2f2d58b4cd74bc522db404277267b6a7",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000063"
+    },
+    {
+      "original": "outputs/dev0/test15/known17.err",
+      "bytes": 611,
+      "sha256": "f22b608ef0e91a7737f3c1872199a1422b4849a5b72f4f8d1c3a1fa8262fddf8",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000064"
+    },
+    {
+      "original": "outputs/dev0/test15/noclob.err",
+      "bytes": 43,
+      "sha256": "ff344562d83170d90bfc0d5cfddbaaa4067a2b223c4813d8bb0102fbda51abb3",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000065"
+    },
+    {
+      "original": "outputs/dev0/test15/result.json",
+      "bytes": 5169,
+      "sha256": "15f92865cb3b094e5ccf5822cc698f075d82a1a470da118b99673f9db774706d",
+      "mode": 436,
+      "roles": [
+        "historical qualification N01",
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000066"
+    },
+    {
+      "original": "outputs/dev0/test15/resume.err",
+      "bytes": 608,
+      "sha256": "220fdbad8cca705544d851eb920744e6680b54338df5c9ba611ad00dd2819a1e",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000067"
+    },
+    {
+      "original": "outputs/dev0/test15/rewind.err",
+      "bytes": 590,
+      "sha256": "edf57d5a8d14b9b99f2f610761b66afd6eee5335a18bf4bc6deabbe11ef49f32",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000068"
+    },
+    {
+      "original": "outputs/dev0/test15/self.out",
+      "bytes": 66,
+      "sha256": "fb6d1a6b497f7d1e8fdc5bb56cef790b457871ae0159269bb126b7d22c47f22b",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000069"
+    },
+    {
+      "original": "outputs/dev0/test15/small1.err",
+      "bytes": 576,
+      "sha256": "059c541971f3f126207b205d380a06ca9b4830a71ca1e2559bc172c925a54fdc",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000070"
+    },
+    {
+      "original": "outputs/dev0/test15/small2.err",
+      "bytes": 577,
+      "sha256": "268bfcac21e0e6ab62eb3e2b80ffdf6adcb76d208cbcb535cd53ba70d9bf00e5",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000071"
+    },
+    {
+      "original": "outputs/dev0/test15/small3.err",
+      "bytes": 579,
+      "sha256": "f12b7b9b04ea6903b6fd786d707264628ba367e5d762e4723f108907cef0f2ad",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000072"
+    },
+    {
+      "original": "outputs/dev0/test15/smallcheck1.err",
+      "bytes": 327,
+      "sha256": "5f4bc82dc6ac5d02ec6cea47e0b882f0eb5ad6ab949e261c21d5db5342f72c18",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000073"
+    },
+    {
+      "original": "outputs/dev0/test15/smallcheck2.err",
+      "bytes": 328,
+      "sha256": "ec775ef6e905523a1c834e83516895858fe4ee452ba8c0f0cf9c567c86719a74",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000074"
+    },
+    {
+      "original": "outputs/dev0/test15/smallcheck3.err",
+      "bytes": 329,
+      "sha256": "a871937859a6562c6c18c29860d919290f4f3638e2ffc20e5d97214beb35f5c5",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000075"
+    },
+    {
+      "original": "outputs/dev0/test15/thread1.err",
+      "bytes": 578,
+      "sha256": "e9ed55e836039774941ab1178062cc03e16f6522b0098d038eeb456121ccc55f",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000076"
+    },
+    {
+      "original": "outputs/dev0/test15/thread16.err",
+      "bytes": 584,
+      "sha256": "8246f0a630fb70242b18824554468ec474fdc9e29c0ab4b672e0d6509e946a44",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000077"
+    },
+    {
+      "original": "outputs/dev0/test15/thread2.err",
+      "bytes": 578,
+      "sha256": "8276466d46d608e113e1ba07418aad28db6f4ab3ce18f48661779b6d26b2fbc3",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000078"
+    },
+    {
+      "original": "outputs/dev0/test15/thread4.err",
+      "bytes": 578,
+      "sha256": "4433b83e9345af28c59328f3740b60bdb9a8978da92ec358f6e4a17c5805a604",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000079"
+    },
+    {
+      "original": "outputs/dev0/test16/check17.err",
+      "bytes": 350,
+      "sha256": "c1cd269d14151808302bb89af41175e456afca8a7623ec4581f2c91966d03c81",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000080"
+    },
+    {
+      "original": "outputs/dev0/test16/cli0.err",
+      "bytes": 52,
+      "sha256": "fb5c5a2c2e3ce2faf5cd36536b36745f882190fec22d029ad650065b63acd46a",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000047"
+    },
+    {
+      "original": "outputs/dev0/test16/cli1.err",
+      "bytes": 39,
+      "sha256": "3a5e8f2b214fd0027a2ab0473156dd3c9bd38e00815b609108da5eb46b19475e",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000048"
+    },
+    {
+      "original": "outputs/dev0/test16/cli10.err",
+      "bytes": 39,
+      "sha256": "3a5e8f2b214fd0027a2ab0473156dd3c9bd38e00815b609108da5eb46b19475e",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000048"
+    },
+    {
+      "original": "outputs/dev0/test16/cli11.err",
+      "bytes": 39,
+      "sha256": "3a5e8f2b214fd0027a2ab0473156dd3c9bd38e00815b609108da5eb46b19475e",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000048"
+    },
+    {
+      "original": "outputs/dev0/test16/cli12.err",
+      "bytes": 47,
+      "sha256": "dd31cb8df7394ee5853bb0f0f4a4a447d9bb028f087d29df4931bb326bd19207",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000049"
+    },
+    {
+      "original": "outputs/dev0/test16/cli2.err",
+      "bytes": 51,
+      "sha256": "3c85c3ea28887a92b6fda73d34587ee3eb250f967cc81ddae0130d7b229702cf",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000050"
+    },
+    {
+      "original": "outputs/dev0/test16/cli3.err",
+      "bytes": 51,
+      "sha256": "3c85c3ea28887a92b6fda73d34587ee3eb250f967cc81ddae0130d7b229702cf",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000050"
+    },
+    {
+      "original": "outputs/dev0/test16/cli4.err",
+      "bytes": 39,
+      "sha256": "3a5e8f2b214fd0027a2ab0473156dd3c9bd38e00815b609108da5eb46b19475e",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000048"
+    },
+    {
+      "original": "outputs/dev0/test16/cli5.err",
+      "bytes": 51,
+      "sha256": "3c85c3ea28887a92b6fda73d34587ee3eb250f967cc81ddae0130d7b229702cf",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000050"
+    },
+    {
+      "original": "outputs/dev0/test16/cli6.err",
+      "bytes": 51,
+      "sha256": "3c85c3ea28887a92b6fda73d34587ee3eb250f967cc81ddae0130d7b229702cf",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000050"
+    },
+    {
+      "original": "outputs/dev0/test16/cli7.err",
+      "bytes": 43,
+      "sha256": "63d444fa47161b1f78d062dbc170b6cf22caafa2555131216c21ce55fdbab063",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000051"
+    },
+    {
+      "original": "outputs/dev0/test16/cli8.err",
+      "bytes": 32,
+      "sha256": "ceb0fc753282c1c650678e5be83827efcb479779345f5d263faa7cf29f8bc82d",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000052"
+    },
+    {
+      "original": "outputs/dev0/test16/cli9.err",
+      "bytes": 39,
+      "sha256": "3a5e8f2b214fd0027a2ab0473156dd3c9bd38e00815b609108da5eb46b19475e",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000048"
+    },
+    {
+      "original": "outputs/dev0/test16/complete.err",
+      "bytes": 598,
+      "sha256": "75d8573c3e1719e9663af509859fd76c5f6989a71f2f1c8db3341dde61a970c6",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000081"
+    },
+    {
+      "original": "outputs/dev0/test16/corrupt100.err",
+      "bytes": 143,
+      "sha256": "11d409d88ffd8f2413f0b137bde23d079645b3d61fbce1e89555f4a07c90747c",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000082"
+    },
+    {
+      "original": "outputs/dev0/test16/corrupt1030.err",
+      "bytes": 141,
+      "sha256": "886344160866a85a89c8079243ac66f26c03a31bc4a85866cacea68635ffbc25",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000083"
+    },
+    {
+      "original": "outputs/dev0/test16/corrupt32.err",
+      "bytes": 137,
+      "sha256": "7d63be5ceb1031377e3cdb37202ed9144f212ba92a423883ff41cca0518a7bce",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000084"
+    },
+    {
+      "original": "outputs/dev0/test16/corrupt4.err",
+      "bytes": 400,
+      "sha256": "e740d5c27410a5c20e13bdb12219be3f4f8c85b539cde3b9b08dfcb11f4541f9",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000085"
+    },
+    {
+      "original": "outputs/dev0/test16/crtexact.out",
+      "bytes": 150,
+      "sha256": "cf1771a57c1137c3fb26cc760653f4d589c1a98a23023c6966bac5e58d171e29",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000058"
+    },
+    {
+      "original": "outputs/dev0/test16/crtself.out",
+      "bytes": 18,
+      "sha256": "429ca665f8133156094e85b4e7647baad7286462d761228e3f759edab316a788",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000059"
+    },
+    {
+      "original": "outputs/dev0/test16/iecheck.err",
+      "bytes": 120,
+      "sha256": "b3481355142709ca1fa96cafaed7a96773382df873f0fc4c41763963cb212821",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000060"
+    },
+    {
+      "original": "outputs/dev0/test16/iemax17.err",
+      "bytes": 110,
+      "sha256": "ba789d7e4b0d0faad675917782e4578fe99a7dfca0f3693c6351efcf2ef8d8a5",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000061"
+    },
+    {
+      "original": "outputs/dev0/test16/ieself.out",
+      "bytes": 63,
+      "sha256": "90240f94f0a6f6fe4388630c084a75ee498d6225469819d02b52fac3df28f5ee",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000062"
+    },
+    {
+      "original": "outputs/dev0/test16/interrupt.err",
+      "bytes": 570,
+      "sha256": "887ff0e7eb12e8d419b35a96ba715d3194d45e577a275067b6075e11a4029d17",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000086"
+    },
+    {
+      "original": "outputs/dev0/test16/known17.err",
+      "bytes": 611,
+      "sha256": "3d51bffa3793fc6c93b3c86f87c06e4ca9c23cf1f722a57948e8901d4325e830",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000087"
+    },
+    {
+      "original": "outputs/dev0/test16/noclob.err",
+      "bytes": 43,
+      "sha256": "ff344562d83170d90bfc0d5cfddbaaa4067a2b223c4813d8bb0102fbda51abb3",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000065"
+    },
+    {
+      "original": "outputs/dev0/test16/result.json",
+      "bytes": 5234,
+      "sha256": "4c458cec4f0d5cb7b42e90c26251bcde526835b00a119330ec74895fd5ce2696",
+      "mode": 436,
+      "roles": [
+        "historical qualification N02",
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000088"
+    },
+    {
+      "original": "outputs/dev0/test16/resume.err",
+      "bytes": 608,
+      "sha256": "d911a7ac081a08402071710bd4033f4a11a4ffd664295ef99c32b2da6e24d777",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000089"
+    },
+    {
+      "original": "outputs/dev0/test16/rewind.err",
+      "bytes": 590,
+      "sha256": "5e221f08bc0910e419657141cb117e7b15f03ab5e7d29e0f31ea0188406942fe",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000090"
+    },
+    {
+      "original": "outputs/dev0/test16/self.out",
+      "bytes": 66,
+      "sha256": "fb6d1a6b497f7d1e8fdc5bb56cef790b457871ae0159269bb126b7d22c47f22b",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000069"
+    },
+    {
+      "original": "outputs/dev0/test16/small1.err",
+      "bytes": 576,
+      "sha256": "8634ff758c3ed9d2d04218332d0c627b3693484c6b4c1a2c3ef3c6c77fa02a7e",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000091"
+    },
+    {
+      "original": "outputs/dev0/test16/small2.err",
+      "bytes": 577,
+      "sha256": "6e2692ce49019ef0d3baa96d0444213b158766ab4e3ee69ac0bcca6753c5ff50",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000092"
+    },
+    {
+      "original": "outputs/dev0/test16/small3.err",
+      "bytes": 579,
+      "sha256": "213f205bb3249979ef03be66caf09a66edafd0c5f523bf24ae1df1014dc4546e",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000093"
+    },
+    {
+      "original": "outputs/dev0/test16/smallcheck1.err",
+      "bytes": 327,
+      "sha256": "d04ea127d9b653740f608d1796bda0576268df97c1048cf13e90b76ce9503dd2",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000094"
+    },
+    {
+      "original": "outputs/dev0/test16/smallcheck2.err",
+      "bytes": 328,
+      "sha256": "e0e0f69582f053ff0f784242fb7b228278d2a9a40a9bee375b9cca155b1bec67",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000095"
+    },
+    {
+      "original": "outputs/dev0/test16/smallcheck3.err",
+      "bytes": 329,
+      "sha256": "9f22a7a4fdaa698ef622751d0c30365d9096851474b55be0dfdbc4325db71865",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000096"
+    },
+    {
+      "original": "outputs/dev0/test16/thread1.err",
+      "bytes": 578,
+      "sha256": "8093a227cb25fa721a40e04433b7644c166346ced0f6deb32e7ea9d123ef0537",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000097"
+    },
+    {
+      "original": "outputs/dev0/test16/thread16.err",
+      "bytes": 583,
+      "sha256": "43f8e215d3ef8f22f326509238e84f0bd005540bdcec12ef4a21fd5b14ce88dd",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000098"
+    },
+    {
+      "original": "outputs/dev0/test16/thread2.err",
+      "bytes": 578,
+      "sha256": "1bbe1258c06b27ba7a9fa0141e9a877855882c86e01ae6fd628343595af09e2a",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000099"
+    },
+    {
+      "original": "outputs/dev0/test16/thread4.err",
+      "bytes": 578,
+      "sha256": "d0231727a155be4a4dfad925671ebb0571ed12d6429df73ce5a031a6d9e8f04c",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000100"
+    },
+    {
+      "original": "outputs/dev0/test17/check17.err",
+      "bytes": 350,
+      "sha256": "60b5aaf659fca84cfa6efb62c4dd02c63ea916987bf4f3ad7efed70fa034f0e3",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000101"
+    },
+    {
+      "original": "outputs/dev0/test17/cli0.err",
+      "bytes": 52,
+      "sha256": "fb5c5a2c2e3ce2faf5cd36536b36745f882190fec22d029ad650065b63acd46a",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000047"
+    },
+    {
+      "original": "outputs/dev0/test17/cli1.err",
+      "bytes": 39,
+      "sha256": "3a5e8f2b214fd0027a2ab0473156dd3c9bd38e00815b609108da5eb46b19475e",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000048"
+    },
+    {
+      "original": "outputs/dev0/test17/cli10.err",
+      "bytes": 39,
+      "sha256": "3a5e8f2b214fd0027a2ab0473156dd3c9bd38e00815b609108da5eb46b19475e",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000048"
+    },
+    {
+      "original": "outputs/dev0/test17/cli11.err",
+      "bytes": 39,
+      "sha256": "3a5e8f2b214fd0027a2ab0473156dd3c9bd38e00815b609108da5eb46b19475e",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000048"
+    },
+    {
+      "original": "outputs/dev0/test17/cli12.err",
+      "bytes": 47,
+      "sha256": "dd31cb8df7394ee5853bb0f0f4a4a447d9bb028f087d29df4931bb326bd19207",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000049"
+    },
+    {
+      "original": "outputs/dev0/test17/cli2.err",
+      "bytes": 51,
+      "sha256": "3c85c3ea28887a92b6fda73d34587ee3eb250f967cc81ddae0130d7b229702cf",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000050"
+    },
+    {
+      "original": "outputs/dev0/test17/cli3.err",
+      "bytes": 51,
+      "sha256": "3c85c3ea28887a92b6fda73d34587ee3eb250f967cc81ddae0130d7b229702cf",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000050"
+    },
+    {
+      "original": "outputs/dev0/test17/cli4.err",
+      "bytes": 39,
+      "sha256": "3a5e8f2b214fd0027a2ab0473156dd3c9bd38e00815b609108da5eb46b19475e",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000048"
+    },
+    {
+      "original": "outputs/dev0/test17/cli5.err",
+      "bytes": 51,
+      "sha256": "3c85c3ea28887a92b6fda73d34587ee3eb250f967cc81ddae0130d7b229702cf",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000050"
+    },
+    {
+      "original": "outputs/dev0/test17/cli6.err",
+      "bytes": 51,
+      "sha256": "3c85c3ea28887a92b6fda73d34587ee3eb250f967cc81ddae0130d7b229702cf",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000050"
+    },
+    {
+      "original": "outputs/dev0/test17/cli7.err",
+      "bytes": 43,
+      "sha256": "63d444fa47161b1f78d062dbc170b6cf22caafa2555131216c21ce55fdbab063",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000051"
+    },
+    {
+      "original": "outputs/dev0/test17/cli8.err",
+      "bytes": 32,
+      "sha256": "ceb0fc753282c1c650678e5be83827efcb479779345f5d263faa7cf29f8bc82d",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000052"
+    },
+    {
+      "original": "outputs/dev0/test17/cli9.err",
+      "bytes": 39,
+      "sha256": "3a5e8f2b214fd0027a2ab0473156dd3c9bd38e00815b609108da5eb46b19475e",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000048"
+    },
+    {
+      "original": "outputs/dev0/test17/complete.err",
+      "bytes": 598,
+      "sha256": "c39a8e1b1e7e2a35818e1ee27e07b67fdc8ab7c2a5b7306ea120decf943d1736",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000102"
+    },
+    {
+      "original": "outputs/dev0/test17/corrupt100.err",
+      "bytes": 143,
+      "sha256": "60205cf498d7afa928d80094dc8af14c6cb0d2c7a56e51fefa161f416bca741c",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000103"
+    },
+    {
+      "original": "outputs/dev0/test17/corrupt1030.err",
+      "bytes": 141,
+      "sha256": "c5f3edeaefb23755912dabcb8030fc2a723a02feed186c4c8c43e64e71b65382",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000104"
+    },
+    {
+      "original": "outputs/dev0/test17/corrupt32.err",
+      "bytes": 137,
+      "sha256": "5ff1b29426023d96beb2ceaaa8073fa4e53d1b18fcc412a7893467f07a5c96b7",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000105"
+    },
+    {
+      "original": "outputs/dev0/test17/corrupt4.err",
+      "bytes": 400,
+      "sha256": "116cbcd6b7a7bd60d9239ec16b05db645a964ede9858bef7edcb670924d95ce4",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000106"
+    },
+    {
+      "original": "outputs/dev0/test17/crtexact.out",
+      "bytes": 150,
+      "sha256": "cf1771a57c1137c3fb26cc760653f4d589c1a98a23023c6966bac5e58d171e29",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000058"
+    },
+    {
+      "original": "outputs/dev0/test17/crtself.out",
+      "bytes": 18,
+      "sha256": "429ca665f8133156094e85b4e7647baad7286462d761228e3f759edab316a788",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000059"
+    },
+    {
+      "original": "outputs/dev0/test17/iecheck.err",
+      "bytes": 120,
+      "sha256": "b3481355142709ca1fa96cafaed7a96773382df873f0fc4c41763963cb212821",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000060"
+    },
+    {
+      "original": "outputs/dev0/test17/iemax17.err",
+      "bytes": 110,
+      "sha256": "ba789d7e4b0d0faad675917782e4578fe99a7dfca0f3693c6351efcf2ef8d8a5",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000061"
+    },
+    {
+      "original": "outputs/dev0/test17/ieself.out",
+      "bytes": 63,
+      "sha256": "90240f94f0a6f6fe4388630c084a75ee498d6225469819d02b52fac3df28f5ee",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000062"
+    },
+    {
+      "original": "outputs/dev0/test17/interrupt.err",
+      "bytes": 570,
+      "sha256": "fce8ad53c77d187748b93282947d03c202ec351454963093553e85ccbbc2a907",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000107"
+    },
+    {
+      "original": "outputs/dev0/test17/known17.err",
+      "bytes": 611,
+      "sha256": "34ba91901159390962db3962a5580fcf3a6bbc886293fe4982e02541f70f59a7",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000108"
+    },
+    {
+      "original": "outputs/dev0/test17/noclob.err",
+      "bytes": 43,
+      "sha256": "ff344562d83170d90bfc0d5cfddbaaa4067a2b223c4813d8bb0102fbda51abb3",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000065"
+    },
+    {
+      "original": "outputs/dev0/test17/result.json",
+      "bytes": 5231,
+      "sha256": "3eea5029713eca8ac0e19db484514d163e4006699e9687b130406dbb0b6591e8",
+      "mode": 436,
+      "roles": [
+        "historical qualification N03",
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000109"
+    },
+    {
+      "original": "outputs/dev0/test17/resume.err",
+      "bytes": 608,
+      "sha256": "90d6ba8b290ff60dd2bd4e652599f955aca10f0dcd9daddb2866f447531a609c",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000110"
+    },
+    {
+      "original": "outputs/dev0/test17/rewind.err",
+      "bytes": 590,
+      "sha256": "ba7d794eac3c6a1086243a914ca2903a0d78363c383cb151211373b8a2415735",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000111"
+    },
+    {
+      "original": "outputs/dev0/test17/self.out",
+      "bytes": 66,
+      "sha256": "fb6d1a6b497f7d1e8fdc5bb56cef790b457871ae0159269bb126b7d22c47f22b",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000069"
+    },
+    {
+      "original": "outputs/dev0/test17/small1.err",
+      "bytes": 578,
+      "sha256": "01c1e82d0c4b9846233f8cd1de0bd9e1c05303c705113a7ef9db677337df123d",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000112"
+    },
+    {
+      "original": "outputs/dev0/test17/small2.err",
+      "bytes": 577,
+      "sha256": "9e9521adb74552099d156326bba66e471b6a0078a4ccf4275761eb664d2da6d0",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000113"
+    },
+    {
+      "original": "outputs/dev0/test17/small3.err",
+      "bytes": 579,
+      "sha256": "66ebaf780f44ae593d1d342e678c165d8d26691316643487efe9e52413da55a4",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000114"
+    },
+    {
+      "original": "outputs/dev0/test17/smallcheck1.err",
+      "bytes": 328,
+      "sha256": "9eb97dd638b0f3bf6e1968059e72d3668c5d43668148e85ed3f452691e031858",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000115"
+    },
+    {
+      "original": "outputs/dev0/test17/smallcheck2.err",
+      "bytes": 328,
+      "sha256": "02175abd6615fac53d981d20322efe8d5ca341984be2de509a318a12e35afa38",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000116"
+    },
+    {
+      "original": "outputs/dev0/test17/smallcheck3.err",
+      "bytes": 329,
+      "sha256": "c0daa6c391d46d7d53b97f42a011d4966376618ffc36110806a04569c33c3626",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000117"
+    },
+    {
+      "original": "outputs/dev0/test17/thread1.err",
+      "bytes": 578,
+      "sha256": "16d4e3b1834e5e7bbaa61f74e482f682a1e293460bcbfbb73f36200247a689e7",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000118"
+    },
+    {
+      "original": "outputs/dev0/test17/thread16.err",
+      "bytes": 583,
+      "sha256": "3ebf34a91b17e185109aa68ae39d3e1918082aacc5f0449a4d021381556a307a",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000119"
+    },
+    {
+      "original": "outputs/dev0/test17/thread2.err",
+      "bytes": 578,
+      "sha256": "15f3b297ce86b48a2602043ef4d66a32a83a2cbb9399826496cf5d766eda3a98",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000120"
+    },
+    {
+      "original": "outputs/dev0/test17/thread4.err",
+      "bytes": 578,
+      "sha256": "aecd509300a8ccb69e6df0c8ce2e532991775615a1bd9aee1e936cff573b1f58",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000121"
+    },
+    {
+      "original": "outputs/dev0/test18/check17.err",
+      "bytes": 350,
+      "sha256": "1cf4c8b7eaf647e052b25f0cfbc33a112a18b3e3b78280b4e266f88e4a456955",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000122"
+    },
+    {
+      "original": "outputs/dev0/test18/cli0.err",
+      "bytes": 52,
+      "sha256": "fb5c5a2c2e3ce2faf5cd36536b36745f882190fec22d029ad650065b63acd46a",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000047"
+    },
+    {
+      "original": "outputs/dev0/test18/cli1.err",
+      "bytes": 39,
+      "sha256": "3a5e8f2b214fd0027a2ab0473156dd3c9bd38e00815b609108da5eb46b19475e",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000048"
+    },
+    {
+      "original": "outputs/dev0/test18/cli10.err",
+      "bytes": 39,
+      "sha256": "3a5e8f2b214fd0027a2ab0473156dd3c9bd38e00815b609108da5eb46b19475e",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000048"
+    },
+    {
+      "original": "outputs/dev0/test18/cli11.err",
+      "bytes": 39,
+      "sha256": "3a5e8f2b214fd0027a2ab0473156dd3c9bd38e00815b609108da5eb46b19475e",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000048"
+    },
+    {
+      "original": "outputs/dev0/test18/cli12.err",
+      "bytes": 47,
+      "sha256": "dd31cb8df7394ee5853bb0f0f4a4a447d9bb028f087d29df4931bb326bd19207",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000049"
+    },
+    {
+      "original": "outputs/dev0/test18/cli2.err",
+      "bytes": 51,
+      "sha256": "3c85c3ea28887a92b6fda73d34587ee3eb250f967cc81ddae0130d7b229702cf",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000050"
+    },
+    {
+      "original": "outputs/dev0/test18/cli3.err",
+      "bytes": 51,
+      "sha256": "3c85c3ea28887a92b6fda73d34587ee3eb250f967cc81ddae0130d7b229702cf",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000050"
+    },
+    {
+      "original": "outputs/dev0/test18/cli4.err",
+      "bytes": 39,
+      "sha256": "3a5e8f2b214fd0027a2ab0473156dd3c9bd38e00815b609108da5eb46b19475e",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000048"
+    },
+    {
+      "original": "outputs/dev0/test18/cli5.err",
+      "bytes": 51,
+      "sha256": "3c85c3ea28887a92b6fda73d34587ee3eb250f967cc81ddae0130d7b229702cf",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000050"
+    },
+    {
+      "original": "outputs/dev0/test18/cli6.err",
+      "bytes": 51,
+      "sha256": "3c85c3ea28887a92b6fda73d34587ee3eb250f967cc81ddae0130d7b229702cf",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000050"
+    },
+    {
+      "original": "outputs/dev0/test18/cli7.err",
+      "bytes": 43,
+      "sha256": "63d444fa47161b1f78d062dbc170b6cf22caafa2555131216c21ce55fdbab063",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000051"
+    },
+    {
+      "original": "outputs/dev0/test18/cli8.err",
+      "bytes": 32,
+      "sha256": "ceb0fc753282c1c650678e5be83827efcb479779345f5d263faa7cf29f8bc82d",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000052"
+    },
+    {
+      "original": "outputs/dev0/test18/cli9.err",
+      "bytes": 39,
+      "sha256": "3a5e8f2b214fd0027a2ab0473156dd3c9bd38e00815b609108da5eb46b19475e",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000048"
+    },
+    {
+      "original": "outputs/dev0/test18/complete.err",
+      "bytes": 598,
+      "sha256": "af37f070d902e5674f235968c072124d0c0e58efa72579eb6f43501a354d8b6f",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000123"
+    },
+    {
+      "original": "outputs/dev0/test18/corrupt100.err",
+      "bytes": 143,
+      "sha256": "f5bd61008a541937540881b54563e3c775dd62fcf6ed62955e7d793517233d89",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000124"
+    },
+    {
+      "original": "outputs/dev0/test18/corrupt1030.err",
+      "bytes": 141,
+      "sha256": "1356e7d940b7152f801f767f6ab921a340d3bf1b47d0f47f507c76e6d0e4eb5c",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000125"
+    },
+    {
+      "original": "outputs/dev0/test18/corrupt32.err",
+      "bytes": 137,
+      "sha256": "8d329e965f33377a7f10dd61b1aa8483051a8a7eb161c77507571cfcde26bebd",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000126"
+    },
+    {
+      "original": "outputs/dev0/test18/corrupt4.err",
+      "bytes": 400,
+      "sha256": "ba7156b0dcb5d967179bd0493d58d0431b7a34bca5c558a9fcc4c3dad3a4f094",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000127"
+    },
+    {
+      "original": "outputs/dev0/test18/crtexact.out",
+      "bytes": 150,
+      "sha256": "cf1771a57c1137c3fb26cc760653f4d589c1a98a23023c6966bac5e58d171e29",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000058"
+    },
+    {
+      "original": "outputs/dev0/test18/crtself.out",
+      "bytes": 18,
+      "sha256": "429ca665f8133156094e85b4e7647baad7286462d761228e3f759edab316a788",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000059"
+    },
+    {
+      "original": "outputs/dev0/test18/iecheck.err",
+      "bytes": 120,
+      "sha256": "b3481355142709ca1fa96cafaed7a96773382df873f0fc4c41763963cb212821",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000060"
+    },
+    {
+      "original": "outputs/dev0/test18/iemax17.err",
+      "bytes": 110,
+      "sha256": "ba789d7e4b0d0faad675917782e4578fe99a7dfca0f3693c6351efcf2ef8d8a5",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000061"
+    },
+    {
+      "original": "outputs/dev0/test18/ieself.out",
+      "bytes": 63,
+      "sha256": "90240f94f0a6f6fe4388630c084a75ee498d6225469819d02b52fac3df28f5ee",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000062"
+    },
+    {
+      "original": "outputs/dev0/test18/interrupt.err",
+      "bytes": 569,
+      "sha256": "c05ae79530db144e1f0f945e0423e05d2618f845471f3b354e42370c265eed1c",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000128"
+    },
+    {
+      "original": "outputs/dev0/test18/known17.err",
+      "bytes": 611,
+      "sha256": "ca62dc7f163c1863d6c8744dadfa4ada05ae87c32c8a0abf0ab0422a380597bd",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000129"
+    },
+    {
+      "original": "outputs/dev0/test18/noclob.err",
+      "bytes": 43,
+      "sha256": "ff344562d83170d90bfc0d5cfddbaaa4067a2b223c4813d8bb0102fbda51abb3",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000065"
+    },
+    {
+      "original": "outputs/dev0/test18/result.json",
+      "bytes": 5164,
+      "sha256": "9f92466f61d3027afb58c1cbacf34bdcc8e31dd9c013dfefca6dc9d3d6cbda04",
+      "mode": 436,
+      "roles": [
+        "current qualification N01",
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000130"
+    },
+    {
+      "original": "outputs/dev0/test18/resume.err",
+      "bytes": 607,
+      "sha256": "3040b0eceea317767ebda3643b4234ac9dddd8f44df4abe6c4e920e26e9e2204",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000131"
+    },
+    {
+      "original": "outputs/dev0/test18/rewind.err",
+      "bytes": 590,
+      "sha256": "4d6f7da021907e0f4c6b8751bfdea636aa4583b4b2df4c1ae396b9249ca4f466",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000132"
+    },
+    {
+      "original": "outputs/dev0/test18/self.out",
+      "bytes": 66,
+      "sha256": "fb6d1a6b497f7d1e8fdc5bb56cef790b457871ae0159269bb126b7d22c47f22b",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000069"
+    },
+    {
+      "original": "outputs/dev0/test18/small1.err",
+      "bytes": 576,
+      "sha256": "a6da3bb09b8e5a8d703cfc75b36bbfaf8659c1b1930c1215ab9fcab8df289891",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000133"
+    },
+    {
+      "original": "outputs/dev0/test18/small2.err",
+      "bytes": 577,
+      "sha256": "98b12dc3f6625fd79fd1d93b3a6ed2d8c82e4acb85f05c996ebb7dc4ed9483a9",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000134"
+    },
+    {
+      "original": "outputs/dev0/test18/small3.err",
+      "bytes": 579,
+      "sha256": "32a30e2c353ece601a4ec823d607a1db121d5cc6291c7b2cd0990ac8c115f36e",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000135"
+    },
+    {
+      "original": "outputs/dev0/test18/smallcheck1.err",
+      "bytes": 327,
+      "sha256": "1cd249ca82c564763e214cda4ca6573c18bdeaa4f383be6a2e8fd1043b0b49c5",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000136"
+    },
+    {
+      "original": "outputs/dev0/test18/smallcheck2.err",
+      "bytes": 328,
+      "sha256": "211e91cf29a1e2ecf5c6fb4941cd2e6e501d6f95cb6051f59ade95a8276d11d5",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000137"
+    },
+    {
+      "original": "outputs/dev0/test18/smallcheck3.err",
+      "bytes": 329,
+      "sha256": "e5130ff8a082164358fd5f08ca68a6ea84deeba8af5e331201b727932f6d280c",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000138"
+    },
+    {
+      "original": "outputs/dev0/test18/thread1.err",
+      "bytes": 578,
+      "sha256": "0ed95a201042b4d569189f586649db6fa19dedb25c2b4605a934b6abe49e4b14",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000139"
+    },
+    {
+      "original": "outputs/dev0/test18/thread16.err",
+      "bytes": 583,
+      "sha256": "7867ba5a9ad944122751d8bf8d8441ac6924c702d9194dd23ec1489770201e96",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000140"
+    },
+    {
+      "original": "outputs/dev0/test18/thread2.err",
+      "bytes": 578,
+      "sha256": "30a746de42518fcf84596c1f92f1f6e58a41bf3e4bc32fcba0aaf2a2870c88af",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000141"
+    },
+    {
+      "original": "outputs/dev0/test18/thread4.err",
+      "bytes": 578,
+      "sha256": "ae87b5e9b14577ffb95da376ecb8a0fec73b8cc2b1cb2ad0b4876c527a801ab0",
+      "mode": 436,
+      "roles": [
+        "nonempty original known-domain/qualification execution trace"
+      ],
+      "member": "d000142"
+    },
+    {
+      "original": "outputs/dev0/tsanfree.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 436,
+      "roles": [
+        "original qualification or scalar comparison execution trace"
+      ],
+      "member": "d000023"
+    },
+    {
+      "original": "outputs/dev0/tsanracy.err",
+      "bytes": 2016,
+      "sha256": "19123196d78a759658dfa7206ea01fccd0db39bf722294d9d187b1221fb91605",
+      "mode": 436,
+      "roles": [
+        "original qualification or scalar comparison execution trace"
+      ],
+      "member": "d000143"
+    },
+    {
+      "original": "outputs/post26/receipt.json",
+      "bytes": 4260,
+      "sha256": "41b162e82357a07601881cb50e732dc72275eab9db924c7b5c727ca5c66e6da9",
+      "mode": 436,
+      "roles": [
+        "scientific scope/provenance, environment, measured qualification or inheritance"
+      ],
+      "member": "d000144"
+    },
+    {
+      "original": "outputs/post28/receipt.json",
+      "bytes": 4615,
+      "sha256": "ed1ba23400c37882100a20b172cdaa2b3cb66e038f022f2772240b80d53c61fb",
+      "mode": 436,
+      "roles": [
+        "scientific scope/provenance, environment, measured qualification or inheritance"
+      ],
+      "member": "d000145"
+    },
+    {
+      "original": "outputs/rev2/asanaudit.err",
+      "bytes": 360,
+      "sha256": "f383e7e27e49f589d31a46b8e181567894fafadfecd64ce4a88b0055154d33d1",
+      "mode": 436,
+      "roles": [
+        "current qualification N02"
+      ],
+      "member": "d000146"
+    },
+    {
+      "original": "outputs/rev2/asanknown.err",
+      "bytes": 621,
+      "sha256": "baa7022ea241c2c4ea66ab601c79cb2821c9c492984101db20dd26b2f5db3cfb",
+      "mode": 436,
+      "roles": [
+        "current qualification N02"
+      ],
+      "member": "d000147"
+    },
+    {
+      "original": "outputs/rev2/base/src/Makefile",
+      "bytes": 642,
+      "sha256": "42a5bca6d18c3b277860c8bf8c7907ef65508626ac2eb4fadc75f27d7f3f5861",
+      "mode": 436,
+      "roles": [
+        "scientific scope/provenance, environment, measured qualification or inheritance"
+      ],
+      "member": "d000020"
+    },
+    {
+      "original": "outputs/rev2/base/src/a180205.c",
+      "bytes": 27140,
+      "sha256": "9efbc68edc9a9a0e27e3898ac4fd2e4b4e9b069e6d4a6d81f3b9be90ebdc1470",
+      "mode": 436,
+      "roles": [
+        "scientific scope/provenance, environment, measured qualification or inheritance"
+      ],
+      "member": "d000021"
+    },
+    {
+      "original": "outputs/rev2/candidate.json",
+      "bytes": 997,
+      "sha256": "f906a1d9e6f447edcb07e521f06e0774341eb5bbd9fa9b20f6ce3153160e45bb",
+      "mode": 436,
+      "roles": [
+        "current qualification B01",
+        "scientific scope/provenance, environment, measured qualification or inheritance"
+      ],
+      "member": "d000148"
+    },
+    {
+      "original": "outputs/rev2/changes.diff",
+      "bytes": 7682,
+      "sha256": "fbd943fd102720af00daddbb0d868da58c79cf29e2a2766fe636c928bc58f93b",
+      "mode": 436,
+      "roles": [
+        "current qualification N03",
+        "current qualification N05",
+        "current qualification R01",
+        "current qualification R02",
+        "current qualification R03",
+        "current qualification R04",
+        "current qualification R05",
+        "current qualification S01",
+        "scientific scope/provenance, environment, measured qualification or inheritance"
+      ],
+      "member": "d000149"
+    },
+    {
+      "original": "outputs/rev2/clangcheck.py",
+      "bytes": 1572,
+      "sha256": "c9e4a0a8b99b2a0cadc853d31611474fa52591a389ed8ea9256719847a65c7c6",
+      "mode": 436,
+      "roles": [
+        "current qualification B02"
+      ],
+      "member": "d000150"
+    },
+    {
+      "original": "outputs/rev2/clangcmp.json",
+      "bytes": 904,
+      "sha256": "d1bb5e571f0242c0434325e4cd2142ce58ea2a1781ff4ed51623b44e22c9dd0c",
+      "mode": 436,
+      "roles": [
+        "current qualification B02"
+      ],
+      "member": "d000151"
+    },
+    {
+      "original": "outputs/rev2/controller.cpp",
+      "bytes": 1920,
+      "sha256": "19537b5414c81c8005a949bbcaa0ac4cd85c87067e7cc69ed065fd86662097d9",
+      "mode": 436,
+      "roles": [
+        "current qualification R06"
+      ],
+      "member": "d000152"
+    },
+    {
+      "original": "outputs/rev2/controllerbuild.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 436,
+      "roles": [
+        "current qualification R06"
+      ],
+      "member": "d000023"
+    },
+    {
+      "original": "outputs/rev2/counterexamples.py",
+      "bytes": 1384,
+      "sha256": "f866d3d9ce7d8517bdea9bd1a5fe27e730a8ee230b642ef49cc9ba1f4df57fc8",
+      "mode": 436,
+      "roles": [
+        "current qualification D02"
+      ],
+      "member": "d000153"
+    },
+    {
+      "original": "outputs/rev2/fault.err",
+      "bytes": 365,
+      "sha256": "311a3473d827e93079cc9519ce8cd1549010f1230136f8f8302d81e0a1fa4393",
+      "mode": 436,
+      "roles": [
+        "current qualification O01"
+      ],
+      "member": "d000154"
+    },
+    {
+      "original": "outputs/rev2/faultcheck.err",
+      "bytes": 338,
+      "sha256": "8623a117e7f6dd14f6deaf1bc4724e6bb4210a03ca3817ec7efdd51a86b4c3a9",
+      "mode": 436,
+      "roles": [
+        "current qualification O01"
+      ],
+      "member": "d000155"
+    },
+    {
+      "original": "outputs/rev2/faultresume.err",
+      "bytes": 596,
+      "sha256": "73dd5833ecea6b6b88d18f53e1f60a0ac239c24853f16c734904dcc85bc8a489",
+      "mode": 436,
+      "roles": [
+        "current qualification O01"
+      ],
+      "member": "d000156"
+    },
+    {
+      "original": "outputs/rev2/instrumented.json",
+      "bytes": 645,
+      "sha256": "13e5970d218d2c55d2b4717ee949c88fb2f3af2f6decbe50f7ccb60e3d084651",
+      "mode": 436,
+      "roles": [
+        "current qualification N02",
+        "current qualification O01",
+        "current qualification O02",
+        "scientific scope/provenance, environment, measured qualification or inheritance"
+      ],
+      "member": "d000157"
+    },
+    {
+      "original": "outputs/rev2/ledger.json",
+      "bytes": 25251,
+      "sha256": "805d6bdd4f83f1cedd3fce38716c2d3368fab59eda4237b9966034a21cc395b9",
+      "mode": 436,
+      "roles": [
+        "scientific scope/provenance, environment, measured qualification or inheritance"
+      ],
+      "member": "d000158"
+    },
+    {
+      "original": "outputs/rev2/make_test.log",
+      "bytes": 328,
+      "sha256": "dc35974e8f3f5878980fc536b9847b5cd2dee6a0ab332e9cf361977fe34905f2",
+      "mode": 436,
+      "roles": [
+        "current qualification N01"
+      ],
+      "member": "d000159"
+    },
+    {
+      "original": "outputs/rev2/regress.py",
+      "bytes": 5481,
+      "sha256": "a573f8c52ce49230dc8e2bd07b6c0a4e093c4d88e5c4fb6fc6cee87cf9cb67a5",
+      "mode": 436,
+      "roles": [
+        "current qualification D01"
+      ],
+      "member": "d000160"
+    },
+    {
+      "original": "outputs/rev2/verify.py",
+      "bytes": 3249,
+      "sha256": "2c6ab06b93ea4885239cea4ff0c8a74e3624a59c8146e548d6ef9c0066cf7818",
+      "mode": 436,
+      "roles": [
+        "current qualification N02",
+        "current qualification O01"
+      ],
+      "member": "d000161"
+    },
+    {
+      "original": "outputs/rev2/vgaudit.err",
+      "bytes": 348,
+      "sha256": "f01c63a971977c970a19f4f441e78e22719391a12382f16ded9475c676d3a9a7",
+      "mode": 436,
+      "roles": [
+        "current qualification O02"
+      ],
+      "member": "d000162"
+    },
+    {
+      "original": "outputs/rev2/vgknown.err",
+      "bytes": 1983,
+      "sha256": "9e700b7ae872abaf3d991d56dff4af45962db61e919bad88a6f87d0a2ad09fed",
+      "mode": 436,
+      "roles": [
+        "current qualification O02"
+      ],
+      "member": "d000163"
+    },
+    {
+      "original": "runbooks/first18.py",
+      "bytes": 1955,
+      "sha256": "2e1e0c64cf33fed1daa8f6e511fa98d87576e2893cf745e7846d70802723698f",
+      "mode": 436,
+      "roles": [
+        "original program/build identity or executable verification dependency"
+      ],
+      "member": "d000164"
+    },
+    {
+      "original": "runbooks/frozen.json",
+      "bytes": 10065,
+      "sha256": "29c59cff7e03a2e273d6075f535e9802066f649e851b1f2b931b0fa150db4395",
+      "mode": 436,
+      "roles": [
+        "scientific scope/provenance, environment, measured qualification or inheritance"
+      ],
+      "member": "d000165"
+    },
+    {
+      "original": "runbooks/plan28.json",
+      "bytes": 8541,
+      "sha256": "4213cc6e9f5c2760648b9db3a5b5efb97785b2a6988f77cdb521bef5d9f5fa18",
+      "mode": 436,
+      "roles": [
+        "scientific scope/provenance, environment, measured qualification or inheritance"
+      ],
+      "member": "d000166"
+    },
+    {
+      "original": "runbooks/scalar_check.json",
+      "bytes": 397,
+      "sha256": "535b1558ca94cdc7007c570baecb8b04f77335a82bf491a087225d68ac431973",
+      "mode": 436,
+      "roles": [
+        "scientific scope/provenance, environment, measured qualification or inheritance"
+      ],
+      "member": "d000167"
+    },
+    {
+      "original": "runs/n18/consol.json",
+      "bytes": 535,
+      "sha256": "2d5579d82f51e75b1132864cd45c43498b16a62e5c203b1db46eac7e8e70bcb6",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000168"
+    },
+    {
+      "original": "runs/n18/ie/cnt.tsv",
+      "bytes": 289,
+      "sha256": "7cad5538e6832b0490b042870f098cc966124517e382b949d3ea795f99d040fd",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000169"
+    },
+    {
+      "original": "runs/n18/ie/ctl.bin",
+      "bytes": 672,
+      "sha256": "d9775c783db85a0164e1aef34e6672af82fad493203190a99652a02b0580061d",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000170"
+    },
+    {
+      "original": "runs/n18/ie/lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000023"
+    },
+    {
+      "original": "runs/n18/oldb.txt",
+      "bytes": 151,
+      "sha256": "466a29c52f24b11359586313c1abe2f30c87be213189a54fe3f1292520bc1e07",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000171"
+    },
+    {
+      "original": "runs/n18/ops/c001/call.json",
+      "bytes": 856,
+      "sha256": "e55b8117d437d81c3dd332e09fb63126433dff05553e00a03cf127059d295414",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000172"
+    },
+    {
+      "original": "runs/n18/ops/c001/done.json",
+      "bytes": 211,
+      "sha256": "a0bb6330f0f174f5689d1a2d25b21329a08347ad1a2c3ba32ba7e30a1e5bb258",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000173"
+    },
+    {
+      "original": "runs/n18/ops/i001/call.json",
+      "bytes": 988,
+      "sha256": "328aa45abd7354a33ca07620f71237e1cc908cc4c48ceccb174d37251b2a3cc0",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000174"
+    },
+    {
+      "original": "runs/n18/ops/i001/done.json",
+      "bytes": 988,
+      "sha256": "4bff6a8612541b00cac80d433f4a5ebad039086a85c9f0a0899a26972fa29595",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000175"
+    },
+    {
+      "original": "runs/n18/ops/i001/run.log",
+      "bytes": 112,
+      "sha256": "377dab15f45b3e1c61ca60aa2df65bfe6f8e62871a0b7f03859615f827f5988d",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000176"
+    },
+    {
+      "original": "runs/n18/ops/p001/call.json",
+      "bytes": 992,
+      "sha256": "d9d5d6044b5f2bc8c67b563dccee6f95cab6030883e5a422b6d776892310c00b",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000177"
+    },
+    {
+      "original": "runs/n18/ops/p001/done.json",
+      "bytes": 774,
+      "sha256": "851f648b259c6b35e70fea5500c82b93f57ea61096c94fe5aef945936102c424",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000178"
+    },
+    {
+      "original": "runs/n18/ops/p001/run.log",
+      "bytes": 595,
+      "sha256": "9af1c5f32f0c34db907162f272540988a2772635d748cd2048aa88fe8d41fb0b",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000179"
+    },
+    {
+      "original": "runs/n18/ops/v001/call.json",
+      "bytes": 847,
+      "sha256": "974bebc87046ffcb8c25c6286913431d683bb4f0565cd6d214a607b2226ea7d8",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000180"
+    },
+    {
+      "original": "runs/n18/ops/v001/crt.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000023"
+    },
+    {
+      "original": "runs/n18/ops/v001/crt.tsv",
+      "bytes": 167,
+      "sha256": "675f3f87b2e9733672517111c8f674de4b4b90a268296a873ebd0e2b3e16b58d",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000181"
+    },
+    {
+      "original": "runs/n18/ops/v001/done.json",
+      "bytes": 223,
+      "sha256": "9eeee735d9369d0030f2bded87385422eed6664ccf8f68c69b90036f42416545",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000182"
+    },
+    {
+      "original": "runs/n18/ops/v001/ie.log",
+      "bytes": 123,
+      "sha256": "f9a89d9d894cc97c7065dd81b712e6ffc63265774ca75758fa0b260ce57bcb62",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000183"
+    },
+    {
+      "original": "runs/n18/ops/v001/prod.log",
+      "bytes": 336,
+      "sha256": "2fe8b0a2e7582c8795fbf5d51fe9a06608f963ea985f88ad0ba5f45461dda991",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000184"
+    },
+    {
+      "original": "runs/n18/ops/v001/python.err",
+      "bytes": 112,
+      "sha256": "df74e58632229769bb7f4ef3ac3cffbb51be35d6be4a0d79a0bf66ce30f0fa2c",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000185"
+    },
+    {
+      "original": "runs/n18/ops/v001/python.tsv",
+      "bytes": 167,
+      "sha256": "675f3f87b2e9733672517111c8f674de4b4b90a268296a873ebd0e2b3e16b58d",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000181"
+    },
+    {
+      "original": "runs/n18/prod/base.txt",
+      "bytes": 151,
+      "sha256": "466a29c52f24b11359586313c1abe2f30c87be213189a54fe3f1292520bc1e07",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000171"
+    },
+    {
+      "original": "runs/n18/prod/cfg.json",
+      "bytes": 388,
+      "sha256": "5d02099cc3d4fb61416c52262a1ffcc6223b604641af73ba3c736e7009b6fb26",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000186"
+    },
+    {
+      "original": "runs/n18/prod/cnt.tsv",
+      "bytes": 167,
+      "sha256": "675f3f87b2e9733672517111c8f674de4b4b90a268296a873ebd0e2b3e16b58d",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000181"
+    },
+    {
+      "original": "runs/n18/prod/ctl.bin",
+      "bytes": 1024,
+      "sha256": "163a4a3932bec34f6ce25225f987c60a0029c88719920fc2fc614c11770f5874",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000187"
+    },
+    {
+      "original": "runs/n18/prod/end.json",
+      "bytes": 143,
+      "sha256": "9112923a53162209453738c62b66b1175bf98e0db699911a1c5aa0abc6a2ca4c",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000188"
+    },
+    {
+      "original": "runs/n18/prod/evt.bin",
+      "bytes": 36864,
+      "sha256": "91caa69becb1a174103353aeb2128fce5eae59cca7eebaf7d8206d805ae3a033",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000189"
+    },
+    {
+      "original": "runs/n18/prod/lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000023"
+    },
+    {
+      "original": "runs/n18/valid.json",
+      "bytes": 1169,
+      "sha256": "7452987c56bcbf43b4f02d3a83968dd4cde4e9356361eb2b62a4585020040330",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000190"
+    },
+    {
+      "original": "runs/n26/consol.json",
+      "bytes": 535,
+      "sha256": "59bc19bf409dc9ecb1298c3bb60ee46befa3342cb129ae6849bea94e2514e5d8",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000191"
+    },
+    {
+      "original": "runs/n26/ie/cnt.tsv",
+      "bytes": 605,
+      "sha256": "470e3f74418317dbb3edf751dec7cd84e300b00ff704683ac738b1b55287937c",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000192"
+    },
+    {
+      "original": "runs/n26/ie/ctl.bin",
+      "bytes": 672,
+      "sha256": "374833206d09b0a4020bf98060f7b1ee36b3f20cba4cb11d3176d8e0fa4871f3",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000193"
+    },
+    {
+      "original": "runs/n26/ie/lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000023"
+    },
+    {
+      "original": "runs/n26/oldb.txt",
+      "bytes": 168,
+      "sha256": "84a6f3c1cd51c28d131f2a00957ead9901084f1f34084972927e3c312fd349bd",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000194"
+    },
+    {
+      "original": "runs/n26/ops/c001/call.json",
+      "bytes": 856,
+      "sha256": "1ee3387211a20f095626b19e6077f0739e6e8483de28aa30b3df5398daa1b2ab",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000195"
+    },
+    {
+      "original": "runs/n26/ops/c001/done.json",
+      "bytes": 211,
+      "sha256": "6c5f848a8537e3ae8648351560d66ab2c17abdd68a28888bf509c15d2316a97d",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000196"
+    },
+    {
+      "original": "runs/n26/ops/i001/call.json",
+      "bytes": 989,
+      "sha256": "21bcb302d44a8ca70ca065c6f3ed49727be1ecca69965c3a8d2df0d0ab93dee3",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000197"
+    },
+    {
+      "original": "runs/n26/ops/i001/done.json",
+      "bytes": 986,
+      "sha256": "b56f57fd929dad31c2a7403ee5f2eb9838c842ad0d954ada2c6a97d9475980e1",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000198"
+    },
+    {
+      "original": "runs/n26/ops/i001/run.log",
+      "bytes": 4709,
+      "sha256": "0cd93eb8ab6bf008ce03e0fc2f35abd9f29314cd850057d764f27b8710199001",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000199"
+    },
+    {
+      "original": "runs/n26/ops/p001/call.json",
+      "bytes": 994,
+      "sha256": "d58f461b41fa7904ec67f32cfef661fb3c949320e73bdb2f962bcee2a5dd950e",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000200"
+    },
+    {
+      "original": "runs/n26/ops/p001/done.json",
+      "bytes": 777,
+      "sha256": "af225de59936c3340e58ce410409621d0c61ccf48f1db3005a3e1c5a33ee68b1",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000201"
+    },
+    {
+      "original": "runs/n26/ops/p001/run.log",
+      "bytes": 1158,
+      "sha256": "802c3e47e5c2866cb8a698a6b44bae24cb567942afeee746eabbbde836d92c60",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000202"
+    },
+    {
+      "original": "runs/n26/ops/v001/call.json",
+      "bytes": 847,
+      "sha256": "48f8c0caf54b5a138c2cffa8083e6457720031c8b8dd1314c1b7b684268c20e0",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000203"
+    },
+    {
+      "original": "runs/n26/ops/v001/crt.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000023"
+    },
+    {
+      "original": "runs/n26/ops/v001/crt.tsv",
+      "bytes": 344,
+      "sha256": "6e01e8d540352e1b6a44b008669aa3e496a10a5fce3cf8f12b201576f22f634a",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000204"
+    },
+    {
+      "original": "runs/n26/ops/v001/done.json",
+      "bytes": 225,
+      "sha256": "1f312acc0d44d3a7179fe8d6cc1243dda1c9928f8db75382f0a654e5d258b9f8",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000205"
+    },
+    {
+      "original": "runs/n26/ops/v001/ie.log",
+      "bytes": 132,
+      "sha256": "94e5aae38170457be2bc8a6854109eb11f0993875301bb369e07c138450362d7",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000206"
+    },
+    {
+      "original": "runs/n26/ops/v001/prod.log",
+      "bytes": 344,
+      "sha256": "3409772674b7f236d6b7975f94fe549484388b0d2d232436d4cb97d4db6c8f77",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000207"
+    },
+    {
+      "original": "runs/n26/prod/base.txt",
+      "bytes": 151,
+      "sha256": "466a29c52f24b11359586313c1abe2f30c87be213189a54fe3f1292520bc1e07",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000171"
+    },
+    {
+      "original": "runs/n26/prod/cfg.json",
+      "bytes": 388,
+      "sha256": "424aa46cbc17a08521fbca7997dd4e2a22dcd6424502d773445508b1773a87e4",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000208"
+    },
+    {
+      "original": "runs/n26/prod/cnt.tsv",
+      "bytes": 344,
+      "sha256": "6e01e8d540352e1b6a44b008669aa3e496a10a5fce3cf8f12b201576f22f634a",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000204"
+    },
+    {
+      "original": "runs/n26/prod/ctl.bin",
+      "bytes": 1024,
+      "sha256": "ef40a55d309e7b84abffa398e80b417782fbf5c4179cd13e4865a4520f632aa4",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000209"
+    },
+    {
+      "original": "runs/n26/prod/end.json",
+      "bytes": 143,
+      "sha256": "2bbdb8cd9f7ad1464276c398c898fc76abc811b15591a6b41a8ea7ff1ce9ace2",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000210"
+    },
+    {
+      "original": "runs/n26/prod/evt.bin",
+      "bytes": 299008,
+      "sha256": "bfbfb8057d51466042461ae856d30424cee26661591ab7c9ce79e8aa7941a0eb",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000211"
+    },
+    {
+      "original": "runs/n26/prod/lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000023"
+    },
+    {
+      "original": "runs/n26/valid.json",
+      "bytes": 1076,
+      "sha256": "d955e8e4a70ec656da58abd8d5d8ec0e613346448eb22efcb9983ac73af2a3d8",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000212"
+    },
+    {
+      "original": "runs/n28/consol.json",
+      "bytes": 535,
+      "sha256": "94e6c2501bef6d07fb874f6b9b781dc69cae79e5d38a1ea942ac1f236141aab9",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000213"
+    },
+    {
+      "original": "runs/n28/ie/cnt.tsv",
+      "bytes": 689,
+      "sha256": "6c8f4e210317dfe1d21bda996b9ad6a2176f4b81c33f604cdc2a65947f238425",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000214"
+    },
+    {
+      "original": "runs/n28/ie/ctl.bin",
+      "bytes": 672,
+      "sha256": "499cb2af3037d97c137d6007f879bc4f612e75ced4b423cb23a3f30b0e48355c",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000215"
+    },
+    {
+      "original": "runs/n28/ie/lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000023"
+    },
+    {
+      "original": "runs/n28/oldb.txt",
+      "bytes": 345,
+      "sha256": "743a86bfa061bf4a1f8147c3d2fa80904fd0562064edbd0af07fe68a08945dc3",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000216"
+    },
+    {
+      "original": "runs/n28/ops/c001/call.json",
+      "bytes": 856,
+      "sha256": "28aba6c297e18a9763e3d4fc32f6dffe5cc55f1126c71fa9bc6454ca571646e7",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000217"
+    },
+    {
+      "original": "runs/n28/ops/c001/done.json",
+      "bytes": 210,
+      "sha256": "29ec530a11186de655cbc05e251178b2b27adeefddfa167c3cde2b38511c9f29",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000218"
+    },
+    {
+      "original": "runs/n28/ops/i001/call.json",
+      "bytes": 989,
+      "sha256": "231c5b0704e5041693c8d768cd4fc8581c6a1b324ae2eb1b6fa3eb45c1aca593",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000219"
+    },
+    {
+      "original": "runs/n28/ops/i001/done.json",
+      "bytes": 995,
+      "sha256": "8b59e31398af911a6578f6845a97f5d669ef0a0e2f91230f4ef81d6477a3dffc",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000220"
+    },
+    {
+      "original": "runs/n28/ops/i001/run.log",
+      "bytes": 19199,
+      "sha256": "efe212445f35b310c64edaf3f9825b92f7dc0033545f484db96c4999dfee711a",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000221"
+    },
+    {
+      "original": "runs/n28/ops/p001/call.json",
+      "bytes": 994,
+      "sha256": "4be8dc078964388fd3e9de7acccedbe4c40cbe9bd8f16768e90ac1a677bf0b4d",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000222"
+    },
+    {
+      "original": "runs/n28/ops/p001/done.json",
+      "bytes": 776,
+      "sha256": "5ed11b92fd122deafcd6105ee0a96848abaea277de3dc721e5fcdb56528df5e1",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000223"
+    },
+    {
+      "original": "runs/n28/ops/p001/run.log",
+      "bytes": 3454,
+      "sha256": "856d490f5e723c9f5959b518373e6b02e654ce828b9a8b638a97c34973d00c22",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000224"
+    },
+    {
+      "original": "runs/n28/ops/v001/call.json",
+      "bytes": 847,
+      "sha256": "80ba0a6671c64cff2c4cdf5d6f89e642db37bf40354d0eab46ee8d6047c29c72",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000225"
+    },
+    {
+      "original": "runs/n28/ops/v001/crt.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000023"
+    },
+    {
+      "original": "runs/n28/ops/v001/crt.tsv",
+      "bytes": 400,
+      "sha256": "7f6469c8891459b35a36e0981134c47b1fec70303c30afd6fea39c2f472c2695",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000226"
+    },
+    {
+      "original": "runs/n28/ops/v001/done.json",
+      "bytes": 224,
+      "sha256": "a52c7f4b195982604756a4178750387e750029d4c2e4ae7a0fefbe0f121daf10",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000227"
+    },
+    {
+      "original": "runs/n28/ops/v001/ie.log",
+      "bytes": 136,
+      "sha256": "a77ff026429c9f465728072916b7efe1f153357566c0853255bd2dd9d4c16709",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000228"
+    },
+    {
+      "original": "runs/n28/ops/v001/prod.log",
+      "bytes": 346,
+      "sha256": "a7784c66d1451b8ae8ff1e8487e2e952c31425fb9cd3a08fa3d307a0b865b903",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000229"
+    },
+    {
+      "original": "runs/n28/prod/base.txt",
+      "bytes": 151,
+      "sha256": "466a29c52f24b11359586313c1abe2f30c87be213189a54fe3f1292520bc1e07",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000171"
+    },
+    {
+      "original": "runs/n28/prod/cfg.json",
+      "bytes": 388,
+      "sha256": "d1974cc9de8827b2b08ea5ffed8016a2785fa4cd32c3de09bed2091dfa9b7514",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000230"
+    },
+    {
+      "original": "runs/n28/prod/cnt.tsv",
+      "bytes": 400,
+      "sha256": "7f6469c8891459b35a36e0981134c47b1fec70303c30afd6fea39c2f472c2695",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000226"
+    },
+    {
+      "original": "runs/n28/prod/ctl.bin",
+      "bytes": 1024,
+      "sha256": "26d9ab4b6b4a3df88fbeb9cdf4cf953fc3d261d8fbfb03961f6e228661ddc06d",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000231"
+    },
+    {
+      "original": "runs/n28/prod/end.json",
+      "bytes": 143,
+      "sha256": "5d00ca773acb7dc9dcc56aeba68e0b9131d6c78c19f870d4d2f5f2ecde584e5d",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000232"
+    },
+    {
+      "original": "runs/n28/prod/evt.bin",
+      "bytes": 1087488,
+      "sha256": "cfc1d4ad00cc1b8d738eb303f72134afab41fa8f8f7bce27867f18117682a1f6",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000233"
+    },
+    {
+      "original": "runs/n28/prod/lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 384,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000023"
+    },
+    {
+      "original": "runs/n28/valid.json",
+      "bytes": 1076,
+      "sha256": "01230962fc376c2762b5772a7664e2a0800eac9f8c74d43f7a540e242fa76dd2",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000234"
+    },
+    {
+      "original": "runs/op.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 436,
+      "roles": [
+        "original completed run/control/count/operation record"
+      ],
+      "member": "d000023"
+    },
+    {
+      "original": "src/Makefile",
+      "bytes": 652,
+      "sha256": "97da330c4a2f65e724c9a4b4509f388c46b78e6c3b54560d99f7f327783aa662",
+      "mode": 436,
+      "roles": [
+        "current qualification B01",
+        "original program/build identity or executable verification dependency"
+      ],
+      "member": "d000235"
+    },
+    {
+      "original": "src/a180205",
+      "bytes": 65336,
+      "sha256": "adbabdb38705bd17cf8ccbe1d6b7ab5262748cf5e2694a3f5f96e85cdb863226",
+      "mode": 509,
+      "roles": [
+        "original program/build identity or executable verification dependency"
+      ],
+      "member": "d000236"
+    },
+    {
+      "original": "src/a180205.c",
+      "bytes": 27483,
+      "sha256": "af1d8da5347c30d1b528b9bf8c463a76e299c4c9dd1ad60763c8a1363755f1db",
+      "mode": 436,
+      "roles": [
+        "original program/build identity or executable verification dependency"
+      ],
+      "public": "src/a180205.c"
+    },
+    {
+      "original": "src_review/rc1/01_MiniMax_review_recomputation_check.py",
+      "bytes": 12629,
+      "sha256": "c15ed3df7597a413bb2684e9f29c952cc1d741560c69dd8edaa1a0babacc288d",
+      "mode": 436,
+      "roles": [
+        "original program/build identity or executable verification dependency"
+      ],
+      "public": "check/scalar.py"
+    },
+    {
+      "original": "validation/book.py",
+      "bytes": 2778,
+      "sha256": "189158628e34203770fc116c8fea2f6770d9a87137b7a5dc4489ba5c8f807046",
+      "mode": 436,
+      "roles": [
+        "original program/build identity or executable verification dependency"
+      ],
+      "public": "check/book.py"
+    },
+    {
+      "original": "validation/crt.py",
+      "bytes": 4222,
+      "sha256": "9c4870e9bec09fbc6e9af3ab9d787595e1d0cf7d69d0a5ed0eb75845705a2c70",
+      "mode": 436,
+      "roles": [
+        "original program/build identity or executable verification dependency"
+      ],
+      "public": "check/crt.py"
+    },
+    {
+      "original": "validation/hostile.py",
+      "bytes": 6627,
+      "sha256": "340cf8df9ea6b9ab94e547731ff548a2c75ac4c19e14743b934f8d7a75ee6248",
+      "mode": 436,
+      "roles": [
+        "current qualification N04",
+        "original program/build identity or executable verification dependency"
+      ],
+      "public": "check/hostile.py"
+    },
+    {
+      "original": "validation/ie",
+      "bytes": 40408,
+      "sha256": "753eb4d5779ef9833081b0756809bfc73d27f616b5d73f36688985f9688371a1",
+      "mode": 509,
+      "roles": [
+        "original program/build identity or executable verification dependency"
+      ],
+      "member": "d000237"
+    },
+    {
+      "original": "validation/ie.cpp",
+      "bytes": 10570,
+      "sha256": "acbf71bbb59cb3349b949d47583361f2c102a98bcf42d5b7030241508efe37af",
+      "mode": 436,
+      "roles": [
+        "original program/build identity or executable verification dependency"
+      ],
+      "public": "check/ie.cpp"
+    },
+    {
+      "original": "validation/test.py",
+      "bytes": 9961,
+      "sha256": "02d3f9dac64442c0e91b3fea79d98145cf9db3c1e2eb63ac685b58d81d717d41",
+      "mode": 436,
+      "roles": [
+        "current qualification N01",
+        "original program/build identity or executable verification dependency"
+      ],
+      "public": "check/test.py"
+    }
+  ],
+  "limits": "No original large F/W tables or diagnostic fixture payloads; no full native-table replay; historic path strings are provenance, not private dependencies."
+}
