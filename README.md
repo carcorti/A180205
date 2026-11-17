@@ -7,6 +7,12 @@ PDF, computational sources, canonical data and retained execution evidence.
 The Zenodo series DOI identifies all releases; it does not identify one
 immutable software version. Use the GitHub release tag for this exact package.
 
+Published package: [v1.0.1](https://github.com/carcorti/A180205/releases/tag/v1.0.1).
+GitHub's file and directory rows show the latest commit affecting each path;
+unchanged sources and data can therefore display an earlier commit title.
+Those titles describe history. The release page identifies the published
+package and its current publication status.
+
 ## Definition and result
 
 For n>=1, count ordered permutations p of 0,...,n-1 admitting nonnegative
