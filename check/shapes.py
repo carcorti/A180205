@@ -47,17 +47,20 @@ def main():
         extracted=parent/'extract';extracted.mkdir()
         with zipfile.ZipFile(archive) as z:z.extractall(extracted)
         outcomes['provider_zip_extraction']=run(extracted/'carcorti-A180205-draft')
-        for case in ('missing','changed','unexpected','nested_git','git_file','table_semantics'):
+        for case in ('missing','changed','missing_pdf','changed_pdf','unexpected','nested_git','git_file','table_semantics'):
             target=parent/case;shutil.copytree(PUB,target)
             if case=='missing':(target/'data/b180205.txt').unlink()
             elif case=='changed':
                 p=target/'data/b180205.txt';p.write_bytes(p.read_bytes().replace(b'1 1\n',b'1 9\n',1))
+            elif case=='missing_pdf':(target/'paper/A180205.pdf').unlink()
+            elif case=='changed_pdf':
+                p=target/'paper/A180205.pdf';p.write_bytes(p.read_bytes()+b'changed\n')
             elif case=='unexpected':(target/'extra.txt').write_text('unexpected\n')
             elif case=='nested_git':
                 p=target/'check/.git';p.mkdir();(p/'config').write_text('not root metadata\n')
             elif case=='git_file':(target/'.git').write_text('gitdir: private path\n')
             else:
-                p=target/'paper/A180205_v4.tex';text=p.read_text()
+                p=target/'paper/A180205.tex';text=p.read_text()
                 old='28 & 1226245772785310491672576';assert old in text
                 p.write_text(text.replace(old,'28 & 1226245772785310491672577',1))
                 # A matching new checksum must not hide a scientific table discrepancy.

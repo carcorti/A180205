@@ -218,8 +218,8 @@ def texcheck():
     with tempfile.TemporaryDirectory(prefix='a180205-tex-') as tmp:
         for i in range(2):
             command(['pdflatex','-draftmode','-no-shell-escape','-interaction=nonstopmode',
-                     '-halt-on-error','-output-directory',tmp,ROOT/'paper/A180205_v4.tex'])
-        log=(Path(tmp)/'A180205_v4.log').read_text()
+                     '-halt-on-error','-output-directory',tmp,ROOT/'paper/A180205.tex'])
+        log=(Path(tmp)/'A180205.log').read_text()
         need(not any(x in log for x in ('LaTeX Warning:','LaTeX Error:','Overfull','Underfull',
                                         'Undefined control sequence')),'TeX log issue')
         need(not list(Path(tmp).glob('*.pdf')),'forbidden PDF')
@@ -240,7 +240,7 @@ def main():
     canonical=rows(raw)
     need([n for n,a in canonical]==list(range(1,29)),'canonical contiguous1..28')
     need(canonical[-1][1]==1226245772785310491672576,'endpoint')
-    manuscript=(ROOT/'paper/A180205_v4.tex').read_text()
+    manuscript=(ROOT/'paper/A180205.tex').read_text()
     block=manuscript.split(r'\begin{tabular}{@{}rr@{\qquad}rr@{}}')[1].split(r'\end{tabular}')[0]
     table=[]
     for line in block.splitlines():

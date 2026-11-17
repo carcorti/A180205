@@ -598,7 +598,7 @@ These checks support their tested boundaries, not a universal absence of
 software defects or instrumented execution through 28.
 
 Original validator sources, their required inputs and execution records
-are retained locally. A reproducibility check can reconstruct the final
+are included in the public package. A reproducibility check can reconstruct the final
 28-row result from the small stored IE residue/control files and compare
 it with the native table without repeating either census. The original
 large native intermediate tables have been intentionally discarded after
@@ -610,9 +610,9 @@ The retained known-domain regression suite was originally run against its
 17-row baseline and must not be interpreted as a fresh test against the
 subsequently extended canonical file.
 
-The intended computational package is identified in~\cite{corti}.
-Its locators are prospective. Future public-package reproduction is
-separate from the retained local execution evidence used here.
+The public computational package is identified in~\cite{corti}.
+Its bounded reproducibility checks remain distinct from the retained
+original execution evidence used here.
 
 \section{Results and measured costs}
 \label{sec:results}
@@ -773,11 +773,12 @@ or an exact recurrence for subsequent terms.
 
 \section*{Data availability}
 
-A local publication package accompanies this monolithic LaTeX manuscript;
-its public release is pending. It contains the producer and build recipe,
-complete count table and b-file, IE/CRT sources and original residue records,
-supplementary Python checks, selected original completion and qualification
-records, environment information and a bounded package verifier.
+The computational package is publicly available from the GitHub repository
+and the Zenodo release series cited in~\cite{corti}. It contains the producer
+and build recipe, complete count table and b-file, IE/CRT sources and original
+residue records, supplementary Python checks, selected original completion
+and qualification records, environment information and a bounded package
+verifier. The monolithic LaTeX source and matching PDF accompany the package.
 Its indexed compressed evidence includes the original build identities and
 inputs required for the documented retained-result checks, without a private
 workspace dependency. Original large intermediate tables and obsolete
@@ -785,10 +786,8 @@ diagnostic payloads are not retained or required by those checks.
 The resulting native-table replay limitation is stated in
 Section~\ref{sec:validation}. Enquiries may be addressed to the author
 at the email on the title page.
-The project reference~\cite{corti} specifies the
-intended GitHub repository and Zenodo archive; these are prospective
-locators, and the DOI is an author-designated placeholder. No existing public
-A180205 deposit is asserted.
+The Zenodo DOI in~\cite{corti} identifies the release series across versions;
+it is not an immutable identifier of a single software release.
 
 \section*{AI use disclosure}
 
@@ -975,9 +974,9 @@ consulted November 2026.
 \bibitem{corti}
 C. Corti,
 \emph{Exact Enumeration of Adjacent-Sum Permutations: OEIS A180205 through
-$n=28$}, GitHub repository and Zenodo archive, 2026.
+$n=28$}, GitHub repository and Zenodo release series, 2026.
 \url{https://github.com/carcorti/A180205};
-\url{https://doi.org/10.5281/zenodo.xxxxxxxx}.
+\url{https://doi.org/10.5281/zenodo.24311714}.
 
 \end{thebibliography}
 \end{document}

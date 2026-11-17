@@ -1,0 +1,14 @@
+# Generated files; keep paper/A180205.tex and paper/A180205.pdf tracked.
+__pycache__/
+*.py[cod]
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+/src/a180205
+/check/ie

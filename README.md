@@ -2,10 +2,10 @@
 
 Carlo Corti — Independent researcher — carlo.corti@outlook.com
 
-**Repository published — v1.0 release pending.** This repository contains the
-verified publication payload. Draft metadata was prepared on17 November2026
-for the intended first release v1.0. The Zenodo DOI remains an intentional
-draft sentinel; no GitHub release or Zenodo deposit has been published.
+**Release v1.0.1.** This package includes the manuscript source and matching
+PDF, computational sources, canonical data and retained execution evidence.
+The Zenodo series DOI identifies all releases; it does not identify one
+immutable software version. Use the GitHub release tag for this exact package.
 
 ## Definition and result
 
@@ -28,7 +28,7 @@ The first index uncomputed locally is29; this is not a worldwide-priority claim.
 
 | Path | Role |
 |---|---|
-| `paper/A180205_v4.tex` | Current English monolithic manuscript and inline bibliography; no PDF |
+| `paper/A180205.tex`, `paper/A180205.pdf` | English monolithic manuscript with inline bibliography and matching PDF |
 | `src/a180205.c`, `src/Makefile` | Exact reviewed producer source and publication build/check routing |
 | `check/ie.cpp`, `check/crt.py` | Exact repeated-label IE source and original fail-closed CRT driver |
 | `check/scalar.py`, `check/first18.py` | Original MiniMax scalar implementation and path-adapted wrapper |
@@ -37,7 +37,7 @@ The first index uncomputed locally is29; this is not a worldwide-priority claim.
 | `check/verify.py` | New bounded publication driver: inventory, evidence, stored-residue reconstruction, descriptor and small-domain checks |
 | `proof/proof.tgz`, `proof/index.json` | Selected original runs, execution/build identities and qualification records; flat short archive names mapped to original paths, sizes, hashes, modes and roles |
 | `proof/path.diff` | Complete Makefile/first18 publication-only routing differences |
-| `LICENSE`, `CITATION.cff`, `sha256.txt` | Existing author-supplied MIT license, draft citation metadata and exact payload inventory |
+| `LICENSE`, `CITATION.cff`, `.gitignore`, `sha256.txt` | Author-supplied MIT license, citation metadata, generated-file exclusions and exact payload inventory |
 
 The original scientific C/C++/CRT code is unchanged. The public Makefile changes
 `validation` to the short directory `check` and sends `make test` to the
@@ -121,7 +121,30 @@ python3 -B check/verify.py --tex
 
 Two draftmode/no-shell-escape passes check references and box warnings in
 temporary storage; no PDF is produced. Source checks do not inspect a rendered
-PDF or assert publication completion. The designated DOI sentinel remains.
+PDF. The delivered PDF is generated from the same source and is included in
+the checksum inventory. It contains the verified Zenodo series DOI.
+
+To rebuild the PDF with pdfLaTeX, run from the repository root:
+
+```bash
+set -eu
+build_dir=$(mktemp -d)
+trap 'rm -rf "$build_dir"' EXIT
+for pass in 1 2 3; do
+  pdflatex -no-shell-escape -interaction=nonstopmode -halt-on-error \
+    -output-directory "$build_dir" paper/A180205.tex
+done
+if grep -Eq 'Warning:|Error:|pdfTeX warning|Overfull|Underfull|Undefined control sequence|^!' "$build_dir/A180205.log"; then
+  cat "$build_dir/A180205.log"
+  exit 1
+fi
+cp "$build_dir/A180205.pdf" paper/A180205.pdf
+```
+
+A regenerated PDF may have different metadata bytes. Its SHA-256 must be
+refreshed in `sha256.txt` before the exact-inventory verification is rerun.
+The delivered PDF is retained by Git; `.gitignore` excludes only TeX auxiliary
+files, Python caches and the two documented locally built executables.
 
 ## Isolated publication-shape audit
 
@@ -134,8 +157,9 @@ The ordinary verification commands above also support Git clones.
 python3 -B check/shapes.py
 ```
 
-It runs three positive payload shapes and six rejection controls, including a
-changed manuscript count with freshly updated checksums. Each execution mounts
+It runs three positive payload shapes and eight rejection controls, including
+missing/altered PDFs and a changed manuscript count with freshly updated
+checksums. Each execution mounts
 only the payload and standard system tools; `/home/carlo` is absent and the
 payload is read-only. The first shape also builds/smokes the native code and
 checks TeX in draftmode. All copy/archive/fixture roots are temporary and removed.
@@ -192,9 +216,10 @@ Use CITATION.cff's preferred article metadata for this study.
 
 Repository: https://github.com/carcorti/A180205
 
-Intended archive: https://doi.org/10.5281/zenodo.xxxxxxxx
+Zenodo release series: https://doi.org/10.5281/zenodo.24311714
 
-The latter is an author-required draft sentinel, not an existing deposit.
-The repository upload is authorized. Creating the v1.0 release, publishing a
-Zenodo deposit and replacing the DOI sentinel require Carlo Corti's separate
-authorization.
+Exact GitHub release: https://github.com/carcorti/A180205/releases/tag/v1.0.1
+
+The series DOI may resolve to the latest archived release. Until Zenodo has
+ingested v1.0.1, its latest version can still be v1.0; the GitHub tag identifies
+this package without ambiguity. The previous v1.0 release remains immutable.

@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Please cite the accompanying article using the preferred citation. Pre-release metadata; v1.0 and the Zenodo deposit are pending."
+message: "Please cite the accompanying article using the preferred citation. The Zenodo DOI identifies the release series; use the version field for this software release."
 type: software
 title: "A180205: exact enumeration through n=28"
 authors:
@@ -7,12 +7,12 @@ authors:
     given-names: Carlo
     affiliation: Independent researcher
     email: carlo.corti@outlook.com
-version: v1.0
+version: v1.0.1
 date-released: 2026-11-17
 license: MIT
 repository-code: https://github.com/carcorti/A180205
 url: https://github.com/carcorti/A180205
-doi: 10.5281/zenodo.xxxxxxxx
+doi: 10.5281/zenodo.24311714
 abstract: "Exact weighted subset enumeration of adjacent-sum permutations through n=28, with repeated-label inclusion-exclusion, deterministic CRT reconstruction, bounded definition-level checks and original execution evidence."
 keywords:
   - OEIS A180205
@@ -29,5 +29,5 @@ preferred-citation:
       affiliation: Independent researcher
       email: carlo.corti@outlook.com
   year: 2026
-  doi: 10.5281/zenodo.xxxxxxxx
-  url: https://doi.org/10.5281/zenodo.xxxxxxxx
+  doi: 10.5281/zenodo.24311714
+  url: https://doi.org/10.5281/zenodo.24311714
